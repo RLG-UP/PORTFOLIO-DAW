@@ -1,0 +1,208 @@
+
+img{
+width: 150px;
+}
+
+
+.destImg{
+    width: 200px;
+    padding: 6px;
+    border: 2px solid brown;
+    border-radius:50%;
+    
+}
+#Index{
+    color:crimson;
+}
+.flags{
+    padding: 6px;
+    border: 2px solid brown;
+    border-radius:25%;
+}
+
+#GoBack{
+    text-align: right;
+}
+
+.CountryFormat{
+    vertical-align: top;
+    width: 100%;
+}
+ol li{
+    text-decoration: dotted;
+    color:darkblue;
+}
+
+#TableLink{
+    font-size: 10px;
+    font-style: italic;
+}
+h2{
+    border-bottom: 3px dotted grey;
+}
+h2:hover{
+    border-bottom: 6px dotted rgb(231, 230, 230);
+}
+
+.TablaNombre{
+    vertical-align: top;
+    vertical-align: baseline bottom;
+    width: 0.1%;
+    white-space: nowrap;
+    
+}
+
+
+.FormatTable{
+    vertical-align: top;
+    text-align: center;
+    width: 100%;
+    
+}
+
+
+.FormatTable tbody ul li{
+    vertical-align: top;
+    text-align: left;
+    width: 100%;
+}
+
+.FormatTable i{
+    font-size: 11px;
+}
+
+.FormatTable thead tr:nth-child(1){
+    background-color: rgb(231, 230, 230);
+    font-style: italic;
+    font-weight: bold;
+}
+
+.AgendaTable{
+    vertical-align: top;
+    text-align: left;
+    width: 100%;
+    
+}
+
+.AgendaTable thead tr:nth-child(1){
+    background-color: rgb(49, 197, 103);
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.AgendaTable tbody tr:nth-child(even){
+    color:black;
+    background-color:rgb(152, 212, 156);
+}
+
+.AgendaTable tbody img{
+    width: 30px;
+    
+}
+
+.AgendaTable tbody tr td:nth-child(9){
+    text-align: center;
+}
+
+#FormatPhoto{
+    width: 100px;
+}
+
+#FormatPhoto2{
+    width: 200px;
+}
+
+#FormatPhoto2{
+    width: 150px;
+}
+   
+.Table_Photo{
+    text-align: left;
+    vertical-align: bottom;
+    width: 0.1%;
+    white-space: nowrap;
+}
+
+
+th{
+    color: black;
+}
+
+.NormalTable tbody tr:nth-child(even){
+    color:white;
+    background-color:gray;
+}
+/*
+tbody tr:nth-child(even){
+    color:white;
+    background-color:gray;
+}
+*/
+
+p{
+    padding: 1px;
+    margin: 8px;
+    border: 10px /*solid black*/;
+}
+
+.SubButton{
+    /*
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 45%;
+    padding-right: 45%;
+    */
+    padding: 20%;
+    border-radius: 100%;
+    border-color: lime;
+    box-shadow: none;
+    border-style: solid;
+    color: lime;
+    background-color: black;
+}
+
+.dest_info{
+    display:inline-block;
+}
+
+.img1{
+    visibility: none;
+}
+
+.img2{
+    visibility: hidden;
+}
+
+.img3{
+    top: -20px;
+    left: 40px;
+    visibility: inherit;
+    position: relative;
+}
+
+.img4{
+    top: -20px;
+    left: 40px;
+    visibility: absolute;
+    position: relative;
+}
+
+
+.img5{
+    top: -20px;
+    left: 40px;
+    visibility: absolute;
+    position: fixed;
+}
+
+.content{
+    text-align: justify;
+}
+
+/*
+.dest_info{
+    display: inline-block;
+}
+*/
