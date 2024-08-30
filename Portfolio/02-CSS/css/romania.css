@@ -1,3 +1,28 @@
 body {
     margin: 0;
 }
+
+#Red{
+    height:300px;
+    width: 150px;
+    background: darkblue;
+}
+
+#Blue{
+    height:300px;
+    width: 150px;
+    position:absolute;
+    top: 81px;
+    left: 150px;
+    
+    background: Yellow;
+}
+
+#Yellow{
+    height:300px;
+    width: 150px;
+    position:absolute;
+    top: 81px;
+    left: 300px;
+    background: crimson;
+}

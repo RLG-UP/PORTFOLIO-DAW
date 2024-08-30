@@ -1,5 +1,5 @@
 body {
-    
+    margin: 0;
 }
 
 div{
@@ -16,7 +16,7 @@ div{
 
 #Div2{
     position:absolute;
-    left: 266px;
+    left: 258px;
     border: 20px solid black;
     background:blue;
 }
@@ -24,7 +24,7 @@ div{
 
 #Div3{
     position:absolute;
-    left: 506px;
+    left: 498px;
     top: 580px;
     border: 10px solid black;
     background:darkblue;
