@@ -1,3 +1,31 @@
 body {
-    margin: 0;
+    
+}
+
+div{
+    height: 200px;
+    width: 200px;
+
+}
+
+#Div1{
+    border: 10px solid black;
+    padding: 20px;
+    background:aqua;
+}
+
+#Div2{
+    position:absolute;
+    left: 266px;
+    border: 20px solid black;
+    background:blue;
+}
+
+
+#Div3{
+    position:absolute;
+    left: 506px;
+    top: 580px;
+    border: 10px solid black;
+    background:darkblue;
 }
