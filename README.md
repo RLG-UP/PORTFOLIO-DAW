@@ -1,2 +1,2 @@
-# com111-class
-Repository for class COM 111: Web Application Development @ UP GDL
+# PORTFOLIO-DAW
+Repository for class COM 111: RODRIGO LOPEZ'S REPO 4 Web Application Development @ UP GDL
