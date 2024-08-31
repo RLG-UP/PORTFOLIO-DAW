@@ -57,7 +57,7 @@ a{
 }
 
 a:hover{
-    color:#0f2512;
+    color:green;
 }
 
 p{
@@ -265,6 +265,42 @@ p{
     background-color: none;
 }
 
+#Div1{
+    background: #f2f2de;
+}
+#Div2{
+    background: #eaf2de;
+}
+#Div3{
+    background: #e0f2de;
+}
+#Div4{
+    background: #c8fff9;
+}
+#Div4{
+    background: #afd9ee;
+}
+#Div5{
+    background: #b6eac2;
+}
+#Div6{
+    background: #aee1b0;
+}
+#Div7{
+    background: #c0ddbb;
+}
+#Div8{
+    background: #cae6c5;
+}
+#Div9{
+    background: #d3eacf;
+}
+#Div10{
+    background: #e1f4dd;
+}
+#Div11{
+    background: #568116;
+}
 .dest_info{
     display:inline-block;
 }
