@@ -16,9 +16,22 @@ form input{
     background: #d6ddff;
 }
 
+
+form textarea{
+    border-radius: 20%;
+    background: #d6ddff;
+}
+
+form select{
+    border-radius: 20%;
+    background: #d6ddff;
+}
+
 form label{
     color: #f2f2de;
 }
+
+
 
 hr{
     border: dotted solid #EAF6F6;
@@ -30,12 +43,12 @@ hr{
 }
 
 body{
-    background:#f2f2de;
     font-family: "Merriweather", serif;
     font-weight: 400;
     font-size: 12px;
     font-style: normal;
     text-align: center;
+    background: #f2f2de;
 }
 
 h1{
@@ -199,7 +212,7 @@ table tbody td ul li{
 }
 
 .AgendaTable tbody {
-    color: #f2f2de;
+    color: #0e1116;
 }
 
 .AgendaTable tbody tr:nth-child(even){
@@ -347,6 +360,24 @@ p{
     display: table;
   }
   
+
+.mountain{
+  background-image: url("../images/mountain.png");
+  width:100%;
+  height: 100hv;
+  background-position: center; 
+  background-size: cover; 
+  background-attachment: fixed;
+}
+
+.cloud{
+    height: 50px;
+    width: 100px;
+    position: sticky;
+    top: 10px;
+    border-radius: 0%;
+}
+
 
 .dest_info{
     display:inline-block;
