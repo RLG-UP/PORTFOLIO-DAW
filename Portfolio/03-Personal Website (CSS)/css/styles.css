@@ -1,64 +1,100 @@
 
 img{
-width: 150px;
+width: 100px;
+height: 100px;
+border-radius: 100%;
 }
 
 hr{
-    color: blue;
+    border: dotted solid #EAF6F6;
+    width: 6px;
+    border-bottom: none;
+    width: 4%;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 body{
-    background:black;
+    background:#f2f2de;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-size: 12px;
+    font-style: normal;
+    text-align: center;
 }
 
 h1{
-    color: lime;
+    color: #0e0e10;
+    font-family: "Sacramento", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5.5rem;
+    margin:50px
 }
 
 h2{
-    color: lime;
+    color: #1e202f;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    padding-bottom: 10px;
 }
 
 h3{
-    color: lime;
+    color: #353249;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: darkred;
+}
+
+a:hover{
+    color:#0f2512;
 }
 
 p{
-    color: lime;
+    color: #0e1116;
 }
 
 blockquote{
-    color: lime;
+    color: #0e1116;
 }
 
 
 label{
-    color: lime;
+    color: #0e1116;
 }
 
 caption{
-    color: lime;
-}
-
-a{
-    color: lime;
+    color: #0e1116;
 }
 
 
 .destImg{
-    width: 200px;
+    width: 100px;
+    height:100px;
     padding: 6px;
-    border: 2px solid lime;
-    border-radius:50%;
+    border: 2px solid #0e1116;
+    border-radius:100%;
     
 }
 #Index{
-    color:lime;
+    color:darkred;
 }
 .flags{
     padding: 6px;
-    border: 2px solid lime;
-    border-radius:25%;
+    border: 2px solid #0e1116;
+    width: 100px;
+    height:100px;
+    border-radius:100%;
 }
 
 #GoBack{
@@ -68,16 +104,17 @@ a{
 .CountryFormat{
     vertical-align: top;
     width: 100%;
+    color:#0e1116;
 }
 
 ol li{
     text-decoration: dotted;
-    color:lime;
+    color:darkred;
 }
 
 ul li{
     text-decoration: dotted;
-    color:lime;
+    color:darkred;
 }
 
 #TableLink{
@@ -85,10 +122,10 @@ ul li{
     font-style: italic;
 }
 h2{
-    border-bottom: 3px dotted lime;
+    border-bottom: 3px dotted #a3a3a3;
 }
 h2:hover{
-    border-bottom: 6px dotted blue;
+    border-bottom: 6px dotted #0f2512;
 }
 
 .TablaNombre{
@@ -107,7 +144,9 @@ h2:hover{
     
 }
 
-
+table tbody td ul li{
+    color: #0e1116;
+}
 .FormatTable tbody ul li{
     vertical-align: top;
     text-align: left;
@@ -119,14 +158,14 @@ h2:hover{
 }
 
 .FormatTable thead tr:nth-child(1){
-    background-color: lime;
-    color: black;
+    background-color: #0e1116;
+    color: #f2f2de;
     font-style: italic;
     font-weight: bold;
 }
 
 .FormatTable tbody{
-    color:lime;
+    color:#0e1116;
 }
 
 .AgendaTable{
@@ -137,24 +176,24 @@ h2:hover{
 }
 
 .AgendaTable thead tr:nth-child(1){
-    color: black;
-    background-color: lime;
+    color: #f2f2de;
+    background-color: #0e1116;
     font-style: italic;
     text-align: center;
     font-weight: bold;
 }
 
 .AgendaTable tbody {
-    color: lime;
+    color: #f2f2de;
 }
 
 .AgendaTable tbody tr:nth-child(even){
-    color:black;
-    background-color:blue;
+    color:#f2f2de;
+    background-color:#0e1116;
 }
 
 .AgendaTable tbody img{
-    width: 30px;
+    width: 100px;
     
 }
 
@@ -167,11 +206,11 @@ h2:hover{
 }
 
 #FormatPhoto2{
-    width: 200px;
+    width: 100px;
 }
 
 #FormatPhoto2{
-    width: 150px;
+    width: 100px;
 }
    
 .Table_Photo{
@@ -182,18 +221,18 @@ h2:hover{
 }
 
 .NormalTable tbody tr:nth-child(even){
-    color:black;
-    background-color:blue;
+    color:#f2f2de;
+    background-color:#0e1116;
 }
 
 .NormalTable tbody tr:nth-child(odd){
-    color:lime;
+    color:#f2f2de;
     
 }
 
 .NormalTable thead{
-    color:black;
-    background-color:lime;
+    color:#f2f2de;
+    background-color:#0e1116;
     
 }
 
@@ -219,11 +258,11 @@ p{
     */
     padding: 20%;
     border-radius: 100%;
-    border-color: lime;
+    border-color: #0e1116;
     box-shadow: none;
     border-style: solid;
-    color: lime;
-    background-color: black;
+    color: #0e1116;
+    background-color: none;
 }
 
 .dest_info{
