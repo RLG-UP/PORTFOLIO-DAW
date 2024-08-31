@@ -3,20 +3,61 @@ img{
 width: 150px;
 }
 
+hr{
+    color: blue;
+}
+
+body{
+    background:black;
+}
+
+h1{
+    color: lime;
+}
+
+h2{
+    color: lime;
+}
+
+h3{
+    color: lime;
+}
+
+p{
+    color: lime;
+}
+
+blockquote{
+    color: lime;
+}
+
+
+label{
+    color: lime;
+}
+
+caption{
+    color: lime;
+}
+
+a{
+    color: lime;
+}
+
 
 .destImg{
     width: 200px;
     padding: 6px;
-    border: 2px solid brown;
+    border: 2px solid lime;
     border-radius:50%;
     
 }
 #Index{
-    color:crimson;
+    color:lime;
 }
 .flags{
     padding: 6px;
-    border: 2px solid brown;
+    border: 2px solid lime;
     border-radius:25%;
 }
 
@@ -28,9 +69,15 @@ width: 150px;
     vertical-align: top;
     width: 100%;
 }
+
 ol li{
     text-decoration: dotted;
-    color:darkblue;
+    color:lime;
+}
+
+ul li{
+    text-decoration: dotted;
+    color:lime;
 }
 
 #TableLink{
@@ -38,10 +85,10 @@ ol li{
     font-style: italic;
 }
 h2{
-    border-bottom: 3px dotted grey;
+    border-bottom: 3px dotted lime;
 }
 h2:hover{
-    border-bottom: 6px dotted rgb(231, 230, 230);
+    border-bottom: 6px dotted blue;
 }
 
 .TablaNombre{
@@ -72,9 +119,14 @@ h2:hover{
 }
 
 .FormatTable thead tr:nth-child(1){
-    background-color: rgb(231, 230, 230);
+    background-color: lime;
+    color: black;
     font-style: italic;
     font-weight: bold;
+}
+
+.FormatTable tbody{
+    color:lime;
 }
 
 .AgendaTable{
@@ -85,16 +137,20 @@ h2:hover{
 }
 
 .AgendaTable thead tr:nth-child(1){
-    background-color: rgb(49, 197, 103);
+    color: black;
+    background-color: lime;
     font-style: italic;
     text-align: center;
     font-weight: bold;
 }
 
+.AgendaTable tbody {
+    color: lime;
+}
 
 .AgendaTable tbody tr:nth-child(even){
     color:black;
-    background-color:rgb(152, 212, 156);
+    background-color:blue;
 }
 
 .AgendaTable tbody img{
@@ -125,15 +181,22 @@ h2:hover{
     white-space: nowrap;
 }
 
-
-th{
-    color: black;
-}
-
 .NormalTable tbody tr:nth-child(even){
-    color:white;
-    background-color:gray;
+    color:black;
+    background-color:blue;
 }
+
+.NormalTable tbody tr:nth-child(odd){
+    color:lime;
+    
+}
+
+.NormalTable thead{
+    color:black;
+    background-color:lime;
+    
+}
+
 /*
 tbody tr:nth-child(even){
     color:white;
