@@ -264,12 +264,7 @@ table tbody td ul li{
     
 }
 
-/*
-tbody tr:nth-child(even){
-    color:white;
-    background-color:gray;
-}
-*/
+
 
 p{
     padding: 1px;
@@ -278,12 +273,6 @@ p{
 }
 
 .SubButton{
-    /*
-    padding-top: 5%;
-    padding-bottom: 5%;
-    padding-left: 45%;
-    padding-right: 45%;
-    */
     padding: 20%;
     border-radius: 100%;
     border-color: #0e1116;
@@ -342,18 +331,18 @@ p{
   }
   
 
-  /* Add some shadows to create a card effect */
+  /* MESSAGE FROM RODRIGO: COPIED FROM INTERNET - Add some shadows to create a card effect */
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
   
-  /* Some left and right padding inside the container */
+  /* MESSAGE FROM RODRIGO: COPIED FROM INTERNET - Some left and right padding inside the container */
   .container {
     padding-left: 2%;
     padding-right: 2%;
   }
   
-  /* Clear floats */
+  /*MESSAGE FROM RODRIGO: COPIED FROM INTERNET -  Clear floats */
   .container::after, .row::after {
     content: "";
     clear: both;
