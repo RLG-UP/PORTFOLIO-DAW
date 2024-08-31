@@ -5,6 +5,21 @@ height: 100px;
 border-radius: 100%;
 }
 
+form{
+    border-style: dotted;
+    background: #0e1116;
+    color: #f2f2de;
+    
+}
+form input{
+    border-radius: 20%;
+    background: #d6ddff;
+}
+
+form label{
+    color: #f2f2de;
+}
+
 hr{
     border: dotted solid #EAF6F6;
     width: 6px;
@@ -226,7 +241,7 @@ table tbody td ul li{
 }
 
 .NormalTable tbody tr:nth-child(odd){
-    color:#f2f2de;
+    color:#0e1116;
     
 }
 
@@ -299,8 +314,40 @@ p{
     background: #e1f4dd;
 }
 #Div11{
-    background: #568116;
+    background: #fffdcf;
 }
+
+
+
+.column {
+    margin:auto;
+    float:left;
+    width: 31%;
+    height: 500px;
+    margin-bottom: 10px;
+    padding: 0 8px;
+  }
+  
+
+  /* Add some shadows to create a card effect */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Some left and right padding inside the container */
+  .container {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  
+  /* Clear floats */
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+
 .dest_info{
     display:inline-block;
 }
