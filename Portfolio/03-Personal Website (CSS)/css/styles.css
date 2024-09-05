@@ -282,43 +282,9 @@ p{
     background-color: none;
 }
 
-#Div1{
-    background: #f2f2de;
+div:nth-child(even){
+    background: #e0d8ff;
 }
-#Div2{
-    background: #eaf2de;
-}
-#Div3{
-    background: #e0f2de;
-}
-#Div4{
-    background: #c8fff9;
-}
-#Div4{
-    background: #afd9ee;
-}
-#Div5{
-    background: #b6eac2;
-}
-#Div6{
-    background: #aee1b0;
-}
-#Div7{
-    background: #c0ddbb;
-}
-#Div8{
-    background: #cae6c5;
-}
-#Div9{
-    background: #d3eacf;
-}
-#Div10{
-    background: #e1f4dd;
-}
-#Div11{
-    background: #fffdcf;
-}
-
 
 
 .column {
