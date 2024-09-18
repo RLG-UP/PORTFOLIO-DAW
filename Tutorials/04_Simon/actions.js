@@ -12,9 +12,18 @@ function nextSequence(){
         var index = Math.floor(Math.random()*4);
         pattern.push(index);
     }
-    $("#"+arr[index]).fadeOut(500);
-    $("#"+arr[index]).fadeIn(500);
-    $("#sound-"+arr[index])[0].play();
+    
+    
+    for(let i=0; i<pattern.length; i++){
+        setTimeout(() => {
+            $("#"+arr[i]).fadeOut(500);
+            $("#"+arr[i]).fadeIn(500);
+            $("#sound-"+arr[i])[0].play();
+            console.log("Pausa de 1000 ms completada");
+        }, 1000);
+        
+        
+    }
     
 }
 
@@ -23,7 +32,7 @@ $("div[type=button]").click(function(){
     sequence.push(colorId);
     $("#sound-"+colorId)[0].play();
     animatePress(colorId);
-    checkAnswer(level)
+    checkAnswer(level);
 });
 
 function animatePress(color){
@@ -43,9 +52,9 @@ function checkAnswer(thisLevel){
         else{
             option=0;
             level+=1;
-            nextSequence();
-            $("h1").text("Level " + level);
         }
+        nextSequence();
+        $("h1").text("Level " + level);
     }
     else{
         console.log("wrong");
