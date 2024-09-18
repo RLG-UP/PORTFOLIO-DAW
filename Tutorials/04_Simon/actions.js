@@ -13,7 +13,8 @@ function nextSequence(){
     let i = 0;
     const intervalId = setInterval(function() {
         $("#"+arr[pattern[i]]).fadeOut(100).fadeIn(100);
-        $("#sound-"+arr[pattern[i]])[0].play();
+        var audio = new Audio("sounds/"+arr[pattern[i]]+".mp3");
+        audio.play();
         i++;
         if (i >= pattern.length) {
             clearInterval(intervalId);
@@ -24,7 +25,8 @@ function nextSequence(){
 $("div[type=button]").click(function(){
     colorId = this.id;
     userClickedPattern.push(arr.indexOf(colorId));  
-    $("#sound-"+colorId)[0].play();
+    var audio = new Audio("sounds/"+colorId+".mp3");
+        audio.play();
     animatePress(colorId);
     checkAnswer(userClickedPattern.length - 1); 
 });
