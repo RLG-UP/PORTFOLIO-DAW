@@ -1,69 +1,68 @@
-var arr=["red","blue","green","yellow"];
-var pattern=[];
-var sequence=[];
-var level=0;
-var option=0;
+var arr=["red","blue","green","yellow"]; 
+var pattern = [];
+var sequence = [];
+var level = 0;
+var option = 0;
 var colorId;
-var game=true;
+var gameStarted = false;
 
 function nextSequence(){
-    var num = level+1;
-    while(num--){
-        var index = Math.floor(Math.random()*4);
-        pattern.push(index);
-    }
+    var index = Math.floor(Math.random()*4);
+    pattern.push(index);
     
-    
-    for(let i=0; i<pattern.length; i++){
-        setTimeout(() => {
-            $("#"+arr[i]).fadeOut(500);
-            $("#"+arr[i]).fadeIn(500);
-            $("#sound-"+arr[i])[0].play();
-            console.log("Pausa de 1000 ms completada");
-        }, 1000);
-        
-        
-    }
-    
+    let i = 0;
+    const intervalId = setInterval(function() {
+        $("#"+arr[pattern[i]]).fadeOut(100).fadeIn(100);
+        $("#sound-"+arr[pattern[i]])[0].play();
+        i++;
+        if (i >= pattern.length) {
+            clearInterval(intervalId);
+        }
+    }, 600);  
 }
 
 $("div[type=button]").click(function(){
-    colorId=this.id;
-    sequence.push(colorId);
+    colorId = this.id;
+    sequence.push(arr.indexOf(colorId));  
     $("#sound-"+colorId)[0].play();
     animatePress(colorId);
-    checkAnswer(level);
+    checkAnswer(sequence.length - 1); 
 });
 
 function animatePress(color){
-    $("#"+colorId).addClass("pressed");
-    setTimeout(function() { $("#"+colorId).removeClass("pressed");},100);
+    $("#"+color).addClass("pressed");
+    setTimeout(function() { $("#"+color).removeClass("pressed"); }, 100);
 }
 
-function checkAnswer(thisLevel){
-    console.log(sequence[sequence.length-1]);
-        console.log(arr[pattern[option]]);
-        
-    if(arr[pattern[thisLevel]]==sequence[sequence.length-1]){
+function checkAnswer(currentLevel){
+    if (sequence[currentLevel] === pattern[currentLevel]) {
         console.log("success");
-        if(option+1<pattern.length){
-            option+=1;
+        if (sequence.length === pattern.length) {
+            setTimeout(function() {
+                sequence = [];  
+                level++;  
+                $("h1").text("Level " + level);  
+                nextSequence();  
+            }, 1000);
         }
-        else{
-            option=0;
-            level+=1;
-        }
-        nextSequence();
-        $("h1").text("Level " + level);
-    }
-    else{
+    } else {
+        $("h1").text("Game Over, Press Any Key to Restart");
         console.log("wrong");
+        startOver();
     }
 }
 
-$(document).keydown(function(e){
-        nextSequence();
+$(document).keydown(function(){
+    if (!gameStarted) {
         $("h1").text("Level " + level);
-    
+        nextSequence();
+        gameStarted = true;
+    }
 });
 
+function startOver() {
+    level = 0;
+    pattern = [];
+    sequence = [];
+    gameStarted = false;
+}
