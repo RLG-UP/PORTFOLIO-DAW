@@ -1,10 +1,43 @@
 
 .my-nav-bar{
-    background: #151515;
+    background: #151515 !important;
 }
 
-.my-nav-bar a{
-    color: red;
+.my-nav-bar-div{
+    background: transparent !important;
+    text-align: left;
+    font-size: small;
+    margin-top: 2vh;
+    
+}
+
+.my-dropdown{
+    background: #151515 !important;
+    font-size: smaller;
+    border: transparent;
+}
+
+.my-dropdown a{
+    margin: 2vh;
+}
+
+.my-nav-bar-div a{
+    color: #d6ddff !important;
+    background: #151515 !important;
+    margin-top: 1vh;
+    margin-left: 3vh;
+}
+
+.my-nav-bar-div li{
+    color: #d6ddff !important;
+    background: #151515 !important;
+}
+
+
+
+.my-nav-bar-div a:hover{
+    font-weight: bold !important;
+    color: darkred !important;
 }
 
 img{
