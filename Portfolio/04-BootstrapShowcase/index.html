@@ -104,11 +104,38 @@
                 <br/>
                  Hola1234 </strong> <i> Av.Hello int. 30 </i> <br/> <br/>
 
-                 <div class="btn-group bg-light" role="group" aria-label="Basic example">
+                 <div class="btn-group" role="group" aria-label="Basic example">
                     <button type="button" class="btn btn-secondary"><a href="https://www.youtube.com/watch?v=eHKG7EMxWW8&list=PLsDZ7QcsbDR8Wx2-l1oDvJA-77ioQ6mDZ&index=21">Video 1</a></button>
                     <button type="button" class="btn btn-secondary"><a href="https://www.youtube.com/watch?v=-xveqYrKJTE&list=PLsDZ7QcsbDR8Wx2-l1oDvJA-77ioQ6mDZ&index=11&pp=iAQB8AUB">Video 2</a></button>
                     <button type="button" class="btn btn-secondary"><a href="https://www.youtube.com/watch?v=CiXNIjGX1hY&list=PLsDZ7QcsbDR8Wx2-l1oDvJA-77ioQ6mDZ&index=13&pp=iAQB8AUB">Video 3</a></button>
                   </div>
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Launch demo modal
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal Soul</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body bg-transparent">
+                                ACCEPT THE USE OF COOKIES?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Yes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
 </div>
 
            <hr/>
@@ -370,12 +397,13 @@
     <h2 id="Heroes">Meet the Team</h2>
     
     <div class="row">
+
         <!-- Canserbero -->
-        <div class="column">
+        <div class="col-4">
           <div class="card">
             <img src="Heroes_Photos/Canserbero.jpg" alt="Canserbero" id="FormatPhoto2">
             <div class="container">
-              <h3>Tirone José González Orama</h>
+              <h3>Tirone José González Orama</h3>
               <p class="title">Artist & Philosopher</p>
               <p>11/03/1988 - 19/01/2015</p>
               <p><a href="https://open.spotify.com/intl-es/artist/1wGIhYkKWSq4yACtTkCkSX?si=wRb5nN6oQYetPhBj-UGg9A">
@@ -387,7 +415,7 @@
         </div>
       
         <!-- Aristotle -->
-        <div class="column">
+        <div class="col-4">
           <div class="card">
             <img src="Heroes_Photos/Aristotle_Photo.jpg" alt="Aristotle" id="FormatPhoto2">
             <div class="container">
@@ -403,7 +431,7 @@
         </div>
       
         <!-- Diogenes -->
-        <div class="column">
+        <div class="col-4">
           <div class="card">
             <img src="Heroes_Photos/Diogenes_Photo.jpg" alt="Diogenes" id="FormatPhoto2">
             <div class="container">
@@ -419,7 +447,7 @@
         </div>
       
         <!-- Socrates -->
-        <div class="column">
+        <div class="col-4">
           <div class="card">
             <img src="Heroes_Photos/Socrates.jpg" alt="Socrates" id="FormatPhoto2">
             <div class="container">
@@ -435,7 +463,7 @@
         </div>
       
         <!-- Schopenhauer -->
-        <div class="column">
+        <div class="col-4">
           <div class="card">
             <img src="Heroes_Photos/Schopenhauer.jpg" alt="Schopenhauer" id="FormatPhoto2">
             <div class="container">

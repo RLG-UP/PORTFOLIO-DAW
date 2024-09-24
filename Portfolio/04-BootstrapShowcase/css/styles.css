@@ -1,3 +1,14 @@
+.modal{
+    
+}
+.card{
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;
+    margin-bottom: 10%;
+    background: transparent;
+}
+
 
 .ed-accordeon {
     background:#151515 !important;
