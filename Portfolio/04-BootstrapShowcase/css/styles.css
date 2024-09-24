@@ -1,4 +1,8 @@
 
+.ed-accordeon {
+    background:#151515 !important;
+}
+
 .my-nav-bar{
     background: #151515 !important;
 }
@@ -41,9 +45,9 @@
 }
 
 img{
-width: 100px;
-height: 100px;
-border-radius: 100%;
+width: 100px !important; 
+height: 100px !important;
+border-radius: 100% !important;
 }
 
 form{
