@@ -1,10 +1,16 @@
 
 #progressBarContainer {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+    top: 9%;
+    left: 2.5%;
+    width: 95%;
+    z-index: 100;
+
+    background: rgb(206, 204, 204);
+}
+
+#progressBar{
+    background: darkred;
 }
 
 .card{
@@ -22,6 +28,7 @@
 
 .my-nav-bar{
     background: #151515 !important;
+    z-index: 9999;
 }
 
 .my-nav-bar-div{
@@ -29,6 +36,7 @@
     text-align: left;
     font-size: small;
     margin-top: 2vh;
+    z-index: 9999;
     
 }
 
@@ -36,6 +44,7 @@
     background: #151515 !important;
     font-size: smaller;
     border: transparent;
+    z-index: 9999;
 }
 
 .my-dropdown a{
