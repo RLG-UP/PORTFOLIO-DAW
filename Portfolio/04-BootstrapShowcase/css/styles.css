@@ -1,3 +1,11 @@
+.return-top{
+    
+}
+
+
+#exampleModal{
+    z-index: 9999999999;
+}
 
 #progressBarContainer {
     position: fixed;
