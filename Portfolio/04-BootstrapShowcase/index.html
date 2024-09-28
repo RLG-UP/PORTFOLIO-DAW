@@ -34,9 +34,9 @@
 
                   <div class="return-top bg-transparent">
                     <a class="icon-link icon-link-hover" href="#">
-                        Return to Top
-                        <svg class="bi" width="32" height="32" fill="currentColor">
-                            <use xlink:href="bootstrap-icons.svg#arrow-up-circle-fill"/>
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-up-circle-fill iconic-hover" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
                           </svg>
                       </a>
             
@@ -96,12 +96,22 @@
 
             
               </ul>
+
+              <div>
+              <form class="d-flex nav-form" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-danger" type="submit">Search</button>
+              </form>
+
+            </div>
+
               </div>
             </div>
           </nav>
 
           <div id="progressBarContainer" class="progress">
-            <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            </div>
         </div>
 
 <div>
@@ -113,6 +123,9 @@
 <div>   
     <div class="DivTabla">
         <img class="mt-5" src="Images\My_Photo.jpg" alt="My Photo">
+
+        
+        
         <h1 id="Nombre">Rodrigo Lopez</h1>
 
                 <strong>Student
@@ -165,6 +178,104 @@
             </button>
 
 
+            <button class="btn btn-primary m-1 bg-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                Button with data-bs-target
+              </button>
+              
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasExampleLabel">November Rain - Lyrics</h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                
+                <div class="offcanvas-body">
+                    <div data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle m-3" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" >
+                          Dropdown button
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <li><a class="dropdown-item" href="#">Sum'</a></li>
+                          <li><a class="dropdown-item" href="#">Sum' Else</a></li>
+                          <li><a class="dropdown-item" href="#">Sum' Else Here</a></li>
+                        </ul>
+                    </div>
+
+                  <div>
+                    When I look into your eyes
+                    I can see a love restrained
+                    But darlin' when I hold you
+                    Don't you know I feel the same?
+                    <br/>
+                    <br/>
+                    Nothin' lasts forever
+                    And we both know hearts can change
+                    And it's hard to hold a candle
+                    In the cold November rain
+                    <br/>
+                    <br/>
+                    We've been through this such a long long time
+                    Just tryin' to kill the pain, ooh yeah
+                    Love is always coming, love is always going
+                    No one's really sure who's lettin' go today
+                    Walking away
+                    <br/>
+                    <br/>
+                    If we could take the time to lay it on the line
+                    I could rest my head just knowin' that you were mine
+                    All mine
+                    So if you want to love me then darlin' don't refrain
+                    Or I'll just end up walkin' in the cold November rain
+                    <br/>
+                    <br/>
+                    Do you need some time on your own?
+                    Do you need some time 
+                    Ooh, everybody needs some time on their own
+                    Ooh, don't you know you need some time all alone
+                    <br/>
+                    <br/>
+                    I know it's hard to keep an open heart
+                    When even friends seem out to harm you
+                    But if you could heal a broken heart
+                    Wouldn't time be out to charm you?
+                    Oh, oh, oh
+                    <br/>
+                    <br/>
+                    Sometimes I need some time on my own
+                    Sometimes I need some time all alone
+                    Ooh, everybody needs some time on their own
+                    Ooh, don't you know you need some time all alone
+                    <br/>
+                    <br/>
+                    And when your fears subside
+                    And shadows still remain, oh yeah
+                    I know that you can love me when there's no one left to blame
+                    So never mind the darkness, we still can find a way
+                    'Cause nothin' lasts forever, even cold November rain
+                    <br/>
+                    <br/>
+                    Don't ya think that you need somebody?
+                    Don't ya think that you need someone?
+                    Everybody needs somebody
+                    You're not the only one
+                    You're not the only one
+                    <br/>
+                    <br/>
+                    Don't ya think that you need somebody?
+                    Don't ya think that you need someone?
+                    Everybody needs somebody
+                    You're not the only one
+                    You're not the only one
+                    <br/>
+                    <br/>
+                    Don't ya think that you need somebody?
+                    Don't ya think that you need someone?
+                    Everybody needs somebody
+                  </div>
+                  <div class="dropdown mt-3">
+                    
+                  </div>
+                </div>
+              </div>
 
 
 </div>
@@ -427,6 +538,7 @@
 <div id="Div9">
     <h2 id="Heroes">Meet the Team</h2>
     
+    <div class="container-fluid">
     <div class="row">
 
         <!-- Canserbero -->
@@ -510,8 +622,11 @@
         </div>
       </div>
       
-    <hr/>
+    </div>
+      
 </div>
+
+<hr/>
 
 <div id="Div10">
         <h2 id="Agenda">Agenda</h2>
@@ -660,6 +775,39 @@
         
         Suspendisse metus orci, ornare in mi non, rutrum interdum diam. Ut accumsan tellus at purus consequat, eget efficitur ex lacinia. Proin ornare aliquam consequat. In ligula massa, porta in pellentesque et, aliquam vitae diam. Phasellus efficitur sit amet leo at molestie. Cras tempus nisl arcu, nec sodales lacus efficitur vitae. Sed faucibus a purus vel fermentum. Proin malesuada tellus id ornare condimentum.</p>
     </div>
+
+    <div class="form-floating m-5 border border-5 border-danger rounded-top">
+        <textarea class="form-control bg-danger" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+        <label for="floatingTextarea">Comments</label>
+      </div>
+
+      <nav id="navbar-example2" class="navbar navbar-light bg-dark px-3 mb-3">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading1">The</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2">Dire</a>
+          </li>
+          <li class="nav-item"></li>
+            <a class="nav-link" href="#scrollspyHeading3">Straits</a>
+          </li>
+          
+        </ul>
+      </nav>
+
+      <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+        <h4 id="scrollspyHeading1">The</h4>
+        <p class="m-5">Sultans</p>
+        <h4 id="scrollspyHeading2">Dire</h4>
+        <p class="m-5">Of</p>
+        <h4 id="scrollspyHeading3">Straits</h4>
+        <p class="m-5">Swing</p>
+      </div>
+      <hr/>
+      <div class="m-5">
+        
+      </div>
 
 </div>
 

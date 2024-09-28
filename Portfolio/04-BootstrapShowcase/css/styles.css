@@ -1,5 +1,20 @@
-.return-top{
-    
+.offcanvas{
+    z-index: 9999999999;
+}
+
+.nav-form{
+    border: none;
+}
+
+.iconic-hover{
+    margin-right: 60%;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.iconic-hover:hover{
+    transform: translatey(-10%);
+    color: rgb(139, 86, 0);
 }
 
 
