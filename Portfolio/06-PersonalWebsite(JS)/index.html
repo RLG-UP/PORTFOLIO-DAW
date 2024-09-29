@@ -1,12 +1,835 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Website - CSS</title>
-</head>
-<body>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Personal Website</title>
+        
+        <!--Bootstrap CSS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
+        <link href="./css/styles.css" type="text/css" rel="stylesheet"/>
+   
+    </head>
+    <body>
+
+        <nav class="my-nav-bar navbar fixed-top">
+            <div class="container-fluid">
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#nav-bar-small">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+                  <div class="return-top bg-transparent">
+                    <a class="icon-link icon-link-hover" href="#">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-up-circle-fill iconic-hover" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+                          </svg>
+                      </a>
+            
+                   </div>
+
+            <div class="my-nav-bar-div collapse navbar-collapse" id="nav-bar-small">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Presentation </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#DestinationBar" role="button" data-bs-toggle="dropdown" aria-expanded="false">Destinations</a>
+                    <ul class="dropdown-menu my-dropdown" aria-labelledby="navbarDropdown" id="DestinationBar">
+                      <li><a class="dropdown-item" href="My_destination.html#Mexico">Mexico</a></li>
+                      <li><a class="dropdown-item" href="My_destination.html#France">France</a></li>
+                      <li><a class="dropdown-item" href="My_destination.html#Greece">Greece</a></li>
+                      <li><a class="dropdown-item" href="My_destination.html#Spain">Spain</a></li>
+                      <li><a class="dropdown-item" href="My_destination.html#Morocco">Morocco</a></li>
+                    </ul>
+                  </li>
+
+               <li class="nav-item">
+                  <a class="nav-link active" href="#Background">Background</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link active" href="#Education">Education</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link active" href="#Skills">Skills</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#Hobbies">Hobbies</a>
+                  </li>
   
-</body>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#BDays">Birthdays</a>
+                  </li>
+  
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#Heroes">Meet The Team</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#Agenda">Agenda</a>
+                  </li>
+  
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#RendezVous">Rendez-Vous</a>
+                  </li>
+  
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#MountainClouds">Static Mountain & Sticky Clouds</a>
+                  </li>
+
+            
+              </ul>
+
+              <div>
+              <form class="d-flex nav-form" role="search" id="searchForm">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-danger" type="submit">Search</button>
+              </form>
+
+            </div>
+
+              </div>
+            </div>
+          </nav>
+
+          <div id="progressBarContainer" class="progress">
+            <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            </div>
+        </div>
+
+<div>
+
+    <div class="mt-4 p-2" id="arriba">
+
+    </div>
+    
+<div>   
+    <div class="DivTabla">
+        <img class="mt-5" src="Images\My_Photo.jpg" alt="My Photo">
+
+        
+        
+        <h1 id="Nombre">Rodrigo Lopez</h1>
+
+                <strong>Student
+                <br/>
+                 Hola1234 </strong> <i> Av.Hello int. 30 </i> <br/> <br/>
+
+                 <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary"><a href="https://www.youtube.com/watch?v=eHKG7EMxWW8&list=PLsDZ7QcsbDR8Wx2-l1oDvJA-77ioQ6mDZ&index=21" data-bs-toggle="tooltip" data-placement="bottom" title="THIS IS A TOOLTIP">Video 1</a></button>
+                    <button type="button" class="btn btn-secondary"><a href="https://www.youtube.com/watch?v=-xveqYrKJTE&list=PLsDZ7QcsbDR8Wx2-l1oDvJA-77ioQ6mDZ&index=11&pp=iAQB8AUB" data-bs-toggle="tooltip" data-placement="bottom" title="THIS IS A TOOLTIP">Video 2</a></button>
+                    <button type="button" class="btn btn-secondary"><a href="https://www.youtube.com/watch?v=CiXNIjGX1hY&list=PLsDZ7QcsbDR8Wx2-l1oDvJA-77ioQ6mDZ&index=13&pp=iAQB8AUB" data-bs-toggle="tooltip" data-placement="bottom" title="THIS IS A TOOLTIP">Video 3</a></button>
+                  </div>
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                data-bs-toggle="tooltip" data-placement="bottom" title="THIS IS A TOOLTIP">
+                    Launch demo modal
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal Soul</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                
+                            </div>
+
+
+                            <div class="modal-body bg-transparent">
+                                ACCEPT THE USE OF COOKIES?
+                            </div>
+
+                            
+                            <div class="modal-footer">
+                                <div class="spinner-border" role="status">
+                                </div>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Yes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Don't you cry tonight, I still love you, baby
+                And don't you cry tonight
+                Don't you cry tonight, there's a heaven above you, baby
+                And don't you cry tonight" >
+                Popover on bottom
+            </button>
+
+
+            <button class="btn btn-primary m-1 bg-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                Button with data-bs-target
+              </button>
+              
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasExampleLabel">November Rain - Lyrics</h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                
+                <div class="offcanvas-body">
+                    <div data-bs-theme="dark">
+                        <button class="btn btn-secondary dropdown-toggle m-3" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" >
+                          Dropdown button
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <li><a class="dropdown-item" href="#">Sum'</a></li>
+                          <li><a class="dropdown-item" href="#">Sum' Else</a></li>
+                          <li><a class="dropdown-item" href="#">Sum' Else Here</a></li>
+                        </ul>
+                    </div>
+
+                  <div>
+                    When I look into your eyes
+                    I can see a love restrained
+                    But darlin' when I hold you
+                    Don't you know I feel the same?
+                    <br/>
+                    <br/>
+                    Nothin' lasts forever
+                    And we both know hearts can change
+                    And it's hard to hold a candle
+                    In the cold November rain
+                    <br/>
+                    <br/>
+                    We've been through this such a long long time
+                    Just tryin' to kill the pain, ooh yeah
+                    Love is always coming, love is always going
+                    No one's really sure who's lettin' go today
+                    Walking away
+                    <br/>
+                    <br/>
+                    If we could take the time to lay it on the line
+                    I could rest my head just knowin' that you were mine
+                    All mine
+                    So if you want to love me then darlin' don't refrain
+                    Or I'll just end up walkin' in the cold November rain
+                    <br/>
+                    <br/>
+                    Do you need some time on your own?
+                    Do you need some time 
+                    Ooh, everybody needs some time on their own
+                    Ooh, don't you know you need some time all alone
+                    <br/>
+                    <br/>
+                    I know it's hard to keep an open heart
+                    When even friends seem out to harm you
+                    But if you could heal a broken heart
+                    Wouldn't time be out to charm you?
+                    Oh, oh, oh
+                    <br/>
+                    <br/>
+                    Sometimes I need some time on my own
+                    Sometimes I need some time all alone
+                    Ooh, everybody needs some time on their own
+                    Ooh, don't you know you need some time all alone
+                    <br/>
+                    <br/>
+                    And when your fears subside
+                    And shadows still remain, oh yeah
+                    I know that you can love me when there's no one left to blame
+                    So never mind the darkness, we still can find a way
+                    'Cause nothin' lasts forever, even cold November rain
+                    <br/>
+                    <br/>
+                    Don't ya think that you need somebody?
+                    Don't ya think that you need someone?
+                    Everybody needs somebody
+                    You're not the only one
+                    You're not the only one
+                    <br/>
+                    <br/>
+                    Don't ya think that you need somebody?
+                    Don't ya think that you need someone?
+                    Everybody needs somebody
+                    You're not the only one
+                    You're not the only one
+                    <br/>
+                    <br/>
+                    Don't ya think that you need somebody?
+                    Don't ya think that you need someone?
+                    Everybody needs somebody
+                  </div>
+                  <div class="dropdown mt-3">
+                    
+                  </div>
+                </div>
+              </div>
+
+
+</div>
+
+           <hr/>
+            
+           <br/>
+           <p>Systems Engineering student. Passionate about learning and technology. Negotiation, leadership, analysis and problem solving skills.</p>
+           <hr/>
+           <blockquote><i>"¿Te insulto con sinceridad? ¿O te miento por educacion?"</i>
+           <br/>
+                <b>Canserbero</b>
+        </blockquote>
+        <hr/>
+</div>
+<div>
+        <h2><em>My Favorite Spots</em></h2>
+        <p>These are some countries I find <a href="My_destination.html" target ="_parent">INTERESTING</a>. But the most interesting is <a href="My_destination.html#Greece">this.</a>
+            <br/>
+        <ol>
+            <li><a href="My_destination.html#Mexico">Mexico</a></li>
+            <li><a href="My_destination.html#France">France</a></li>
+            <li><a href="My_destination.html#Greece">Greece</a></li>
+            <li><a href="My_destination.html#Spain">Spain</a></li>
+            <li><a href="My_destination.html#Morocco">Morocco</a></li>
+        </ol>
+            <br/>
+       <p>This is a link to <a href="https://www.youtube.com/watch?v=dWRCooFKk3c&pp=ygUjd2hpbGUgbXkgZ3VpdGFyIGdlbnRseSB3ZWVwcyBwcmluY2U%3D">YouTube</a></p> 
+            <br/>
+        <hr/>
+    </div>
+<div>
+        <h2 id="#Index">Index</h2>
+        <p>
+            <ol>
+                <li><a href="#Background">Background</a></li>
+                <li><a href="#Education">Education</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Hobbies">Hobbies</a></li>
+                <li><a href="#BDays">Birthdays</a></li>
+                <li><a href="#Heroes">Meet The Team</a></li>
+                <li><a href="#Agenda">Agenda</a></li>
+                <li><a href="#RendezVous">Rendez-Vous</a></li>
+                <li><a href="#MountainClouds">Static Mountain & Sticky Clouds</a></li>
+            </ol>
+        </p>
+        <hr/>
+    </p> 
+
+        
+</div>
+<div id="Div1">
+                
+                <h2 id="Background">Background</h2>
+                <p>Still a kid. Driven since he was a child to question the truth and have a strong character, over the years he discovered his ease in learning and deduction. Now look for happiness.</p>
+            <hr/>
+</div>
+<div id="Div2">
+                <h2 id="Education">Education</h2>
+           
+
+                <div class="accordion accordion-flush ed-accordeon" id="accordionFlushExample">
+                    <!-- Acordeón para Kinder -->
+                    <div class="accordion-item">
+                        <em class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Kinder
+                            </button>
+                        </em>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body row">
+                                <div class="period col-3"><strong>Period:</strong> 2006-2010</div>
+                                <div class="level col-3"><strong>Level:</strong> Kindergarden</div>
+                                <div class="institution col-3"><strong>Institution:</strong> Tzitlacalli</div>
+                                <div class="reference col-3">
+                                    <a href="http://www.tzitlacalli.edu.mx/" id="TableLink">Link To Institution</a><br/>
+                                    <a href="http://www.tzitlacalli.edu.mx/" id="TableLink">
+                                        <img src="https://tzitlacalli.edu.mx/assets/img/logos/logo_Tzitlacalli_plumbago.png" alt="Tzitlacalli Logo" id="FormatPhoto">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Acordeón para Elementary/Middle/High School -->
+                    <div class="accordion-item">
+                        <em class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                Elementary/Middle/High School
+                            </button>
+                        </em>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body row">
+                                <div class="period col-3"><strong>Period:</strong> 2010-2023</div>
+                                <div class="level col-3"><strong>Level:</strong> Elementary/Middle/High School</div>
+                                <div class="institution col-3"><strong>Institution:</strong> Liceo del Valle</div>
+                                <div class="reference col-3">
+                                    <a href="https://www.liceodelvalle.edu.mx/" id="TableLink">Link To Institution</a><br/>
+                                    <a href="https://www.liceodelvalle.edu.mx/" id="TableLink">
+                                        <img src="./Images/images (2).png" alt="Liceo del Valle Logo" id="FormatPhoto">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Acordeón para College -->
+                    <div class="accordion-item">
+                        <em class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                College
+                            </button>
+                        </em>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body row">
+                                <div class="period col-3"><strong>Period:</strong> 2023-Present Day</div>
+                                <div class="level col-3"><strong>Level:</strong> College</div>
+                                <div class="institution col-3"><strong>Institution:</strong> Universidad Panamericana</div>
+                                <div class="reference col-3">
+                                    <a href="https://www.up.edu.mx/campus-guadalajara/" id="TableLink">Link To Institution</a><br/>
+                                    <a href="https://www.up.edu.mx/campus-guadalajara/" id="TableLink">
+                                        <img src="./Images/arbol_marca_dorado_horizontal_small.png" alt="Universidad Panamericana Logo" id="FormatPhoto">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            <hr/>
+</div>
+<div id="Div3">            
+                <h2 id="Skills">Skills</h2>
+                <ol type="1" start="1">
+                    <li>English <b>90%</b></li>
+                    <li>French <b>75%</b></li>
+                    <li>Adobe Illustrator <b>75%</b></li>
+                    <li>Adobe Photoshop <b>60%</b></li>
+                    <li>Programming in C++ <b>40%</b></li>
+                    
+                </ol>
+            <hr/>
+</div>
+<div id="Div4">
+
+            <h2 id="Hobbies">Hobbies</h2>
+                <h3 id="Favorite Food">Favorite Food</h3>
+
+                <ol start = "1">
+                    <li>Mexican</li>
+                    <li>Italian</li>
+                    <li>Japanese</li>
+                    <li>Libanese</li>
+                    <li>French</li>
+                </ol>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ol start="18">
+                    <li>Creolle</li>
+                    <li>Peruan</li>
+                    <li>No Food</li>
+                </ol>
+                
+                
+      
+</div>
+
+<div id="Div5">
+    <h3 id="Books, Movies & TV Shows">Books, Movies & TV Shows</h3>
+    <table class="FormatTable">
+        <tfoot>
+            <caption><strong>Books</strong></caption>
+        </tfoot>
+        <thead>
+            <tr><td>Title</td><td>Cover</td></tr>
+        </thead>
+        <tbody>
+            <tr><td>The Adventures Of Sherlock Holmes</td><td><img src="Images\download.jpg" alt="Sherlock" id="FormatPhoto"></td></tr>
+            <tr><td>The Art Of War</td><td><img src="Images\download (1).jpg" alt="The Art Of War" id="FormatPhoto"></td></tr>
+            <tr><td>The Nicomachean Ethics</td><td><img src="Images\download (2).jpg" alt="Aristotle" id="FormatPhoto"></td></tr>
+        </tbody>
+    </table>
+    <br/>
+</div>
+
+<div id="Div6">
+    <table class="FormatTable">
+        <tfoot>
+            <caption><strong>Movies</strong></caption>
+        </tfoot>
+        <thead>
+            <tr><td>Title</td><td>Poster</td></tr>
+        </thead>
+        <tbody>
+            <tr><td>Reservoir Dogs</td><td><img src="Images\download (3).jpg" alt="Reservoir Dogs" id="FormatPhoto"></td></tr>
+            <tr><td>The Godfather</td><td><img src="Images\download (4).jpg" alt="Godfather" id="FormatPhoto"></td></tr>
+            <tr><td>Indiana Jones and The Last Crusade</td><td><img src="Images\download (5).jpg" alt="Indiana" id="FormatPhoto"></td></tr>
+        </tbody>
+    </table>
+    <br/>
+</div>
+
+<div id="Div7">
+    <table class="FormatTable">
+        <tfoot>
+            <caption><strong>TV Shows</strong></caption>
+        </tfoot>
+        <thead>
+            <tr><td>Title</td><td>Image</td></tr>
+        </thead>
+        <tbody>
+            <tr><td>Monster</td><td><img src="Images\download (6).jpg" alt="Monster" id="FormatPhoto"></td></tr>
+            <tr><td>The Office</td><td><img src="Images\download (7).jpg" alt="Office" id="FormatPhoto"></td></tr>
+            <tr><td>Jojo's Bizarre Adventure</td><td><img src="Images\download (8).jpg" alt="Jojo" id="FormatPhoto"></td></tr>
+        </tbody>
+    </table>
+    <br/>
+</div>
+
+<div id="Div8">
+            <hr/>
+            <h2 id="BDays">Family Birthdays</h2>
+            <table border="1" class="NormalTable">
+                <thead>
+                    <tr>
+                        <th colspan="2"><strong>Full Name</strong></th>
+                        <th rowspan="2"><strong>Birthday</strong></th>
+                    </tr>
+                    <tr>
+                        <th><strong>Name</strong></th>
+                        <th><strong>Last Name</strong></th>
+                        
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pablo</td>
+                        <td>Lopez</td>
+                        <td>July 15</td>
+                    </tr>
+                    <tr>
+                        <td>Tom</td>
+                        <td>Lopez</td>
+                        <td>December 04</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <caption>Table Of Birthdays</caption>
+                </tfoot>
+            </table>
+       
+        </p>
+        <hr/>
+</div>
+
+<div id="Div9">
+    <h2 id="Heroes">Meet the Team</h2>
+    
+    <div class="container-fluid">
+    <div class="row">
+
+        <!-- Canserbero -->
+        <div class="col-4">
+          <div class="card">
+            <img src="Heroes_Photos/Canserbero.jpg" alt="Canserbero" id="FormatPhoto2">
+            <div class="container">
+              <h3>Tirone José González Orama</h3>
+              <p class="title">Artist & Philosopher</p>
+              <p>11/03/1988 - 19/01/2015</p>
+              <p><a href="https://open.spotify.com/intl-es/artist/1wGIhYkKWSq4yACtTkCkSX?si=wRb5nN6oQYetPhBj-UGg9A">
+                <img src="Heroes_Photos/Muerte_Album.jpg" alt="Canserbero Legacy" id="FormatPhoto3"></a></p>
+              <p><em>"La muerte va tan segura de ganar. Que de ventaja te da una vida."</em></p>
+              <p><em>"Alguien decía que no siempre lloverá. En cambio siempre. Mañana será otro día"</em></p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Aristotle -->
+        <div class="col-4">
+          <div class="card">
+            <img src="Heroes_Photos/Aristotle_Photo.jpg" alt="Aristotle" id="FormatPhoto2">
+            <div class="container">
+              <h3>Aristotle From Stagira</h3>
+              <p class="title">Philosopher</p>
+              <p>384 B.C. - 322 B.C.</p>
+              <p><a href="https://www.biography.com/scholars-educators/aristotle">
+                <img src="Heroes_Photos/Aristotle_Metaphysics.jpg" alt="Aristotle Legacy" id="FormatPhoto3"></a></p>
+              <p><em>"The good ones are so in a unique way, and the bad ones anyway."</em></p>
+              <p><em>"How each one is, such is their conception of the purpose."</em></p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Diogenes -->
+        <div class="col-4">
+          <div class="card">
+            <img src="Heroes_Photos/Diogenes_Photo.jpg" alt="Diogenes" id="FormatPhoto2">
+            <div class="container">
+              <h3>Diogenes <em>"The Dog"</em></h3>
+              <p class="title">Philosopher</p>
+              <p>412 B.C. - 323 B.C.</p>
+              <p><a href="https://www.timetravelrome.com/2019/08/11/agora-of-athens-7-tales-on-diogenes-the-cynic/">
+                <img src="Heroes_Photos/Diogenes_Legacy.jpg" alt="Diogenes Legacy" id="FormatPhoto3"></a></p>
+              <p><em>"Behold! I have brought you a man!"</em></p>
+              <p><em>"I am Diogenes the Dog. I nuzzle the kind, bark at the greedy and bite scoundrels."</em></p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Socrates -->
+        <div class="col-4">
+          <div class="card">
+            <img src="Heroes_Photos/Socrates.jpg" alt="Socrates" id="FormatPhoto2">
+            <div class="container">
+              <h3>Socrates From Athens</h3>
+              <p class="title">Philosopher</p>
+              <p>470 B.C. - 399 B.C.</p>
+              <p><a href="https://www.britannica.com/biography/Socrates">
+                <img src="Heroes_Photos/Socrates_Legacy.jpg" alt="Socrates Legacy" id="FormatPhoto3"></a></p>
+              <p><em>"How many things there are that I don't need!"</em></p>
+              <p><em>"(After being kicked and questioned for his lack of indignation) 'So, would I have to report a donkey that had kicked me?'"</em></p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Schopenhauer -->
+        <div class="col-4">
+          <div class="card">
+            <img src="Heroes_Photos/Schopenhauer.jpg" alt="Schopenhauer" id="FormatPhoto2">
+            <div class="container">
+              <h3>Arthur Schopenhauer</h3>
+              <p class="title">Philosopher</p>
+              <p>22/02/1788 - 21/09/1860</p>
+              <p><a href="https://www.britannica.com/biography/Arthur-Schopenhauer">
+                <img src="Heroes_Photos/Schopenhauer_Legacy.jpg" alt="Schopenhauer Legacy" id="FormatPhoto3"></a></p>
+              <p><em>"Each nation makes fun of the others and they are all right."</em></p>
+              <p><em>"Those alike calls its alikes"</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+      
+</div>
+
+<hr/>
+
+<div id="Div10">
+        <h2 id="Agenda">Agenda</h2>
+
+        <table class="AgendaTable" id="scheduleTable">
+            <thead>
+                <tr><th>Date</th><th>Start</th><th>End</th><th>Description</th><th>Place</th><th>Type</th><th>Notes</th><th>Flag</th><th>Availability</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>28/08/2023 (Monday)</td><td>09:00 AM</td><td>11:00 AM</td><td>Team meeting to discuss the project milestones.</td><td>Conference Room 2</td><td>Internal</td><td>Bring your project updates.</td><td bgcolor="yellow"></td><td><img src="Icons\busy.png" alt="Not Available" id="IconPhoto"></td></tr>
+
+                <tr><td>29/08/2023 (Tuesday)</td><td>02:00 PM</td><td>03:30 PM</td><td>Client presentation on the new marketing strategy.</td><td>Zoom</td><td>External</td><td> Ensure all slides are updated.</td><td bgcolor="crimson"></td><td><img src="Icons\busy.png" alt="Not Available" id="IconPhoto"></td></tr>
+
+                <tr><td>30/08/2023 (Wednesday)</td><td>10:00 AM</td><td>12:00 PM</td><td>Workshop on leadership skills.</td><td>Training Center, Building B</td><td>Internal</td><td> RSVP by Monday.</td><td bgcolor="yellow"></td><td><img src="Icons\busy.png" alt="Not Available" id="IconPhoto"></td></tr>
+
+                <tr><td>31/08/2023 (Thursday)</td><td>01:00 PM</td><td>02:00 PM</td><td>Quarterly financial review meeting.</td><td>Finance Office</td><td>Internal</td><td> Review last quarter reports.</td><td bgcolor="yellow"></td><td><img src="Icons\busy.png" alt="Not Available" id="IconPhoto"></td></tr>
+
+                <tr><td>01/09/2023 (Friday)</td><td>04:00 PM</td><td>06:00 PM</td><td>Company-wide town hall meeting.</td><td>Main Auditorium</td><td>Internal</td><td> Q&A session included.</td><td bgcolor="yellow"></td><td><img src="Icons\busy.png" alt="Not Available" ></td></tr>
+
+                <tr><td>02/09/2023 (Saturday)</td><td>08:00 AM</td><td>10:00 AM</td><td>Community service event: Park cleanup.</td><td>Central Park</td><td>External</td><td> Wear comfortable clothing.</td><td bgcolor="crimson"></td><td><img src="Icons\busy.png" alt="Not Available" id="IconPhoto"></td></tr>
+
+                <tr><td>03/09/2023 (Sunday)</td><td>11:00 AM</td><td>01:00 PM</td><td>Brunch with the executive team.</td><td>The Grand Hotel</td><td>Internal</td><td>Informal discussion on future strategies.</td><td bgcolor="yellow"></td><td><img src="Icons\busy.png" alt="Not Available" id="IconPhoto"></td></tr>
+
+            </tbody>
+        </table>
+        <hr/>
+</div>  
+        <div id="Div11">
+            <h3 id="RendezVous">Make a rendez-vous</h3>
+
+            <form action="#PostAgenda" method="post" id="insertForm">
+                <label for="Start">Start</label>
+            <br/>
+                <input type="time" name="Start" id="start">
+            <br/>
+            <hr/>
+                <label for="End">End</label>
+            <br/>
+                <input type="time" name="End" id="end">
+            <br/>
+            <hr/>
+                <label for="Date">Date</label>
+            <br/>
+                <input type="date" name="Date" id="date">
+            <br/>
+            <hr/>
+                <label for="Place">Place</label>
+            <br/>
+                <input type="text" name="Place" id="place">
+            <br/>
+            <hr/>
+                <label for="Activity">Activity</label>
+            <br/>
+                <input type="text" name="Activity" id="activity">
+            <br/>
+            <hr/>
+                <label for="Type">Type</label>
+            <br/>
+                <select id="type"><option value="Internal">Internal</option><option value="External">External</option><option value="Personal">Personal</option><option value="Familiar">Familiar</option><option value="Academic">Academic</option><option value="Other">Other</option></select>
+            <br/>
+            <hr/>
+                <label for="Notes">Notes</label>
+            <br/>
+                <textarea id="TxtArea" name="TxtArea" cols="40" rows="2"></textarea>
+            <br/>
+            <hr/>
+                <label for="Color">Color</label>
+            <br/>
+                <input type="color" name="Color" id="color">
+            <br/>
+            <hr/>
+                <label for="Busy">Busy</label>
+            <br/>
+                <input type="checkbox" name="Busy" id="busy"> 
+            <br/>
+                <label for="Available">Available</label>
+            <br/>
+                <input type="checkbox" name="Available" id="available">
+            <hr/>
+                <input type="submit" class="SubButton" id="addRow">
+            </form>
+
+        </div>
+        
+<div class="mountain">
+    <h2 id="MountainClouds">Static Mountain & Sticky Cloud</h2>
+    <img src="images/cloud.png" alt="cloud" class="cloud">
+
+    <img src="images/cloud.png" alt="cloud2" class="cloud">   
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed tellus ex. Maecenas quis pellentesque dui. Donec lectus sem, mattis sit amet ultricies vel, laoreet id lectus. Etiam mattis, metus sed rutrum ullamcorper, neque nisl tristique magna, eget finibus lorem ligula nec risus. Curabitur commodo pellentesque lectus aliquet porta. Ut sollicitudin at turpis eu varius. Aenean viverra metus dolor, sit amet vulputate arcu rutrum vitae. Sed dignissim vestibulum arcu, id placerat libero cursus vitae. Aliquam euismod mi id diam venenatis faucibus. In consequat fringilla justo, quis tempus lectus vulputate ac. In vitae leo in sapien mattis condimentum id dictum tortor. Morbi vitae varius dui, eu facilisis neque. Cras id fermentum eros. Vestibulum consequat mi in rhoncus rhoncus. Phasellus vitae lorem scelerisque augue fringilla ornare non sollicitudin odio. Quisque dignissim ipsum vitae metus semper, ut mollis neque pellentesque.
+
+        Quisque molestie orci ac placerat feugiat. Aliquam dictum libero non ante tempor, dignissim fringilla ipsum interdum. Praesent semper semper odio in ultricies. Phasellus semper sapien maximus tellus accumsan volutpat. Donec ut quam id arcu viverra volutpat. Cras in molestie ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla venenatis ornare nunc, id euismod turpis condimentum sed. Donec pretium pharetra risus, posuere iaculis nisi efficitur ac. Duis blandit lorem vitae tellus pulvinar euismod. Suspendisse ac imperdiet nunc, nec facilisis arcu. Nulla sed justo diam. Integer volutpat risus arcu. Sed semper dapibus arcu interdum sodales. Sed vitae hendrerit felis, vel dapibus tortor.
+        
+        Duis egestas, risus vitae volutpat scelerisque, eros neque vestibulum mauris, efficitur luctus magna lorem ac tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris eleifend nibh quis eros tempus, eget tincidunt metus dignissim. Quisque vel iaculis ante. Sed lobortis ipsum id rhoncus euismod. Aliquam iaculis risus sapien, ullamcorper rutrum magna facilisis vel. In hendrerit est nec tortor finibus, ac pretium orci aliquet. Etiam maximus magna eget arcu dapibus laoreet. Phasellus libero diam, dictum vitae elit quis, efficitur elementum arcu. Praesent mollis, sem at ornare posuere, turpis magna accumsan sem, eget bibendum ex neque ut nisl. Integer luctus nisl vitae maximus fermentum. Cras vestibulum augue tellus, ut hendrerit eros vestibulum ut. Donec eu ligula volutpat, vehicula nisl viverra, rutrum ipsum.
+        
+        In augue est, mattis vel posuere congue, vestibulum quis dui. Integer sed imperdiet leo. Morbi dignissim congue justo laoreet malesuada. Phasellus in lacinia augue. Maecenas commodo rutrum purus, non lobortis lorem congue tristique. Quisque id est tempus, condimentum diam nec, suscipit odio. Mauris facilisis augue sit amet tellus imperdiet vestibulum. Pellentesque vitae elit sollicitudin, blandit quam in, fermentum arcu. Maecenas porta justo massa, eget efficitur velit pulvinar sed. Praesent eget ipsum posuere, ornare lectus ut, suscipit nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In sed lacus dapibus, tincidunt libero ac, venenatis justo. Suspendisse ultrices nec justo ac facilisis. Maecenas in lacinia nisl, ut pellentesque purus. Donec vehicula vehicula nibh eu consequat.
+        
+        Suspendisse metus orci, ornare in mi non, rutrum interdum diam. Ut accumsan tellus at purus consequat, eget efficitur ex lacinia. Proin ornare aliquam consequat. In ligula massa, porta in pellentesque et, aliquam vitae diam. Phasellus efficitur sit amet leo at molestie. Cras tempus nisl arcu, nec sodales lacus efficitur vitae. Sed faucibus a purus vel fermentum. Proin malesuada tellus id ornare condimentum.
+        
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed tellus ex. Maecenas quis pellentesque dui. Donec lectus sem, mattis sit amet ultricies vel, laoreet id lectus. Etiam mattis, metus sed rutrum ullamcorper, neque nisl tristique magna, eget finibus lorem ligula nec risus. Curabitur commodo pellentesque lectus aliquet porta. Ut sollicitudin at turpis eu varius. Aenean viverra metus dolor, sit amet vulputate arcu rutrum vitae. Sed dignissim vestibulum arcu, id placerat libero cursus vitae. Aliquam euismod mi id diam venenatis faucibus. In consequat fringilla justo, quis tempus lectus vulputate ac. In vitae leo in sapien mattis condimentum id dictum tortor. Morbi vitae varius dui, eu facilisis neque. Cras id fermentum eros. Vestibulum consequat mi in rhoncus rhoncus. Phasellus vitae lorem scelerisque augue fringilla ornare non sollicitudin odio. Quisque dignissim ipsum vitae metus semper, ut mollis neque pellentesque.
+
+        Quisque molestie orci ac placerat feugiat. Aliquam dictum libero non ante tempor, dignissim fringilla ipsum interdum. Praesent semper semper odio in ultricies. Phasellus semper sapien maximus tellus accumsan volutpat. Donec ut quam id arcu viverra volutpat. Cras in molestie ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla venenatis ornare nunc, id euismod turpis condimentum sed. Donec pretium pharetra risus, posuere iaculis nisi efficitur ac. Duis blandit lorem vitae tellus pulvinar euismod. Suspendisse ac imperdiet nunc, nec facilisis arcu. Nulla sed justo diam. Integer volutpat risus arcu. Sed semper dapibus arcu interdum sodales. Sed vitae hendrerit felis, vel dapibus tortor.
+        
+        Duis egestas, risus vitae volutpat scelerisque, eros neque vestibulum mauris, efficitur luctus magna lorem ac tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris eleifend nibh quis eros tempus, eget tincidunt metus dignissim. Quisque vel iaculis ante. Sed lobortis ipsum id rhoncus euismod. Aliquam iaculis risus sapien, ullamcorper rutrum magna facilisis vel. In hendrerit est nec tortor finibus, ac pretium orci aliquet. Etiam maximus magna eget arcu dapibus laoreet. Phasellus libero diam, dictum vitae elit quis, efficitur elementum arcu. Praesent mollis, sem at ornare posuere, turpis magna accumsan sem, eget bibendum ex neque ut nisl. Integer luctus nisl vitae maximus fermentum. Cras vestibulum augue tellus, ut hendrerit eros vestibulum ut. Donec eu ligula volutpat, vehicula nisl viverra, rutrum ipsum.
+        
+        In augue est, mattis vel posuere congue, vestibulum quis dui. Integer sed imperdiet leo. Morbi dignissim congue justo laoreet malesuada. Phasellus in lacinia augue. Maecenas commodo rutrum purus, non lobortis lorem congue tristique. Quisque id est tempus, condimentum diam nec, suscipit odio. Mauris facilisis augue sit amet tellus imperdiet vestibulum. Pellentesque vitae elit sollicitudin, blandit quam in, fermentum arcu. Maecenas porta justo massa, eget efficitur velit pulvinar sed. Praesent eget ipsum posuere, ornare lectus ut, suscipit nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In sed lacus dapibus, tincidunt libero ac, venenatis justo. Suspendisse ultrices nec justo ac facilisis. Maecenas in lacinia nisl, ut pellentesque purus. Donec vehicula vehicula nibh eu consequat.
+        
+        Suspendisse metus orci, ornare in mi non, rutrum interdum diam. Ut accumsan tellus at purus consequat, eget efficitur ex lacinia. Proin ornare aliquam consequat. In ligula massa, porta in pellentesque et, aliquam vitae diam. Phasellus efficitur sit amet leo at molestie. Cras tempus nisl arcu, nec sodales lacus efficitur vitae. Sed faucibus a purus vel fermentum. Proin malesuada tellus id ornare condimentum.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed tellus ex. Maecenas quis pellentesque dui. Donec lectus sem, mattis sit amet ultricies vel, laoreet id lectus. Etiam mattis, metus sed rutrum ullamcorper, neque nisl tristique magna, eget finibus lorem ligula nec risus. Curabitur commodo pellentesque lectus aliquet porta. Ut sollicitudin at turpis eu varius. Aenean viverra metus dolor, sit amet vulputate arcu rutrum vitae. Sed dignissim vestibulum arcu, id placerat libero cursus vitae. Aliquam euismod mi id diam venenatis faucibus. In consequat fringilla justo, quis tempus lectus vulputate ac. In vitae leo in sapien mattis condimentum id dictum tortor. Morbi vitae varius dui, eu facilisis neque. Cras id fermentum eros. Vestibulum consequat mi in rhoncus rhoncus. Phasellus vitae lorem scelerisque augue fringilla ornare non sollicitudin odio. Quisque dignissim ipsum vitae metus semper, ut mollis neque pellentesque.
+
+        Quisque molestie orci ac placerat feugiat. Aliquam dictum libero non ante tempor, dignissim fringilla ipsum interdum. Praesent semper semper odio in ultricies. Phasellus semper sapien maximus tellus accumsan volutpat. Donec ut quam id arcu viverra volutpat. Cras in molestie ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla venenatis ornare nunc, id euismod turpis condimentum sed. Donec pretium pharetra risus, posuere iaculis nisi efficitur ac. Duis blandit lorem vitae tellus pulvinar euismod. Suspendisse ac imperdiet nunc, nec facilisis arcu. Nulla sed justo diam. Integer volutpat risus arcu. Sed semper dapibus arcu interdum sodales. Sed vitae hendrerit felis, vel dapibus tortor.
+        
+        Duis egestas, risus vitae volutpat scelerisque, eros neque vestibulum mauris, efficitur luctus magna lorem ac tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris eleifend nibh quis eros tempus, eget tincidunt metus dignissim. Quisque vel iaculis ante. Sed lobortis ipsum id rhoncus euismod. Aliquam iaculis risus sapien, ullamcorper rutrum magna facilisis vel. In hendrerit est nec tortor finibus, ac pretium orci aliquet. Etiam maximus magna eget arcu dapibus laoreet. Phasellus libero diam, dictum vitae elit quis, efficitur elementum arcu. Praesent mollis, sem at ornare posuere, turpis magna accumsan sem, eget bibendum ex neque ut nisl. Integer luctus nisl vitae maximus fermentum. Cras vestibulum augue tellus, ut hendrerit eros vestibulum ut. Donec eu ligula volutpat, vehicula nisl viverra, rutrum ipsum.
+        
+        In augue est, mattis vel posuere congue, vestibulum quis dui. Integer sed imperdiet leo. Morbi dignissim congue justo laoreet malesuada. Phasellus in lacinia augue. Maecenas commodo rutrum purus, non lobortis lorem congue tristique. Quisque id est tempus, condimentum diam nec, suscipit odio. Mauris facilisis augue sit amet tellus imperdiet vestibulum. Pellentesque vitae elit sollicitudin, blandit quam in, fermentum arcu. Maecenas porta justo massa, eget efficitur velit pulvinar sed. Praesent eget ipsum posuere, ornare lectus ut, suscipit nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In sed lacus dapibus, tincidunt libero ac, venenatis justo. Suspendisse ultrices nec justo ac facilisis. Maecenas in lacinia nisl, ut pellentesque purus. Donec vehicula vehicula nibh eu consequat.
+        
+        Suspendisse metus orci, ornare in mi non, rutrum interdum diam. Ut accumsan tellus at purus consequat, eget efficitur ex lacinia. Proin ornare aliquam consequat. In ligula massa, porta in pellentesque et, aliquam vitae diam. Phasellus efficitur sit amet leo at molestie. Cras tempus nisl arcu, nec sodales lacus efficitur vitae. Sed faucibus a purus vel fermentum. Proin malesuada tellus id ornare condimentum.
+        
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed tellus ex. Maecenas quis pellentesque dui. Donec lectus sem, mattis sit amet ultricies vel, laoreet id lectus. Etiam mattis, metus sed rutrum ullamcorper, neque nisl tristique magna, eget finibus lorem ligula nec risus. Curabitur commodo pellentesque lectus aliquet porta. Ut sollicitudin at turpis eu varius. Aenean viverra metus dolor, sit amet vulputate arcu rutrum vitae. Sed dignissim vestibulum arcu, id placerat libero cursus vitae. Aliquam euismod mi id diam venenatis faucibus. In consequat fringilla justo, quis tempus lectus vulputate ac. In vitae leo in sapien mattis condimentum id dictum tortor. Morbi vitae varius dui, eu facilisis neque. Cras id fermentum eros. Vestibulum consequat mi in rhoncus rhoncus. Phasellus vitae lorem scelerisque augue fringilla ornare non sollicitudin odio. Quisque dignissim ipsum vitae metus semper, ut mollis neque pellentesque.
+
+        Quisque molestie orci ac placerat feugiat. Aliquam dictum libero non ante tempor, dignissim fringilla ipsum interdum. Praesent semper semper odio in ultricies. Phasellus semper sapien maximus tellus accumsan volutpat. Donec ut quam id arcu viverra volutpat. Cras in molestie ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla venenatis ornare nunc, id euismod turpis condimentum sed. Donec pretium pharetra risus, posuere iaculis nisi efficitur ac. Duis blandit lorem vitae tellus pulvinar euismod. Suspendisse ac imperdiet nunc, nec facilisis arcu. Nulla sed justo diam. Integer volutpat risus arcu. Sed semper dapibus arcu interdum sodales. Sed vitae hendrerit felis, vel dapibus tortor.
+        
+        Duis egestas, risus vitae volutpat scelerisque, eros neque vestibulum mauris, efficitur luctus magna lorem ac tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris eleifend nibh quis eros tempus, eget tincidunt metus dignissim. Quisque vel iaculis ante. Sed lobortis ipsum id rhoncus euismod. Aliquam iaculis risus sapien, ullamcorper rutrum magna facilisis vel. In hendrerit est nec tortor finibus, ac pretium orci aliquet. Etiam maximus magna eget arcu dapibus laoreet. Phasellus libero diam, dictum vitae elit quis, efficitur elementum arcu. Praesent mollis, sem at ornare posuere, turpis magna accumsan sem, eget bibendum ex neque ut nisl. Integer luctus nisl vitae maximus fermentum. Cras vestibulum augue tellus, ut hendrerit eros vestibulum ut. Donec eu ligula volutpat, vehicula nisl viverra, rutrum ipsum.
+        
+        In augue est, mattis vel posuere congue, vestibulum quis dui. Integer sed imperdiet leo. Morbi dignissim congue justo laoreet malesuada. Phasellus in lacinia augue. Maecenas commodo rutrum purus, non lobortis lorem congue tristique. Quisque id est tempus, condimentum diam nec, suscipit odio. Mauris facilisis augue sit amet tellus imperdiet vestibulum. Pellentesque vitae elit sollicitudin, blandit quam in, fermentum arcu. Maecenas porta justo massa, eget efficitur velit pulvinar sed. Praesent eget ipsum posuere, ornare lectus ut, suscipit nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In sed lacus dapibus, tincidunt libero ac, venenatis justo. Suspendisse ultrices nec justo ac facilisis. Maecenas in lacinia nisl, ut pellentesque purus. Donec vehicula vehicula nibh eu consequat.
+        
+        Suspendisse metus orci, ornare in mi non, rutrum interdum diam. Ut accumsan tellus at purus consequat, eget efficitur ex lacinia. Proin ornare aliquam consequat. In ligula massa, porta in pellentesque et, aliquam vitae diam. Phasellus efficitur sit amet leo at molestie. Cras tempus nisl arcu, nec sodales lacus efficitur vitae. Sed faucibus a purus vel fermentum. Proin malesuada tellus id ornare condimentum.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed tellus ex. Maecenas quis pellentesque dui. Donec lectus sem, mattis sit amet ultricies vel, laoreet id lectus. Etiam mattis, metus sed rutrum ullamcorper, neque nisl tristique magna, eget finibus lorem ligula nec risus. Curabitur commodo pellentesque lectus aliquet porta. Ut sollicitudin at turpis eu varius. Aenean viverra metus dolor, sit amet vulputate arcu rutrum vitae. Sed dignissim vestibulum arcu, id placerat libero cursus vitae. Aliquam euismod mi id diam venenatis faucibus. In consequat fringilla justo, quis tempus lectus vulputate ac. In vitae leo in sapien mattis condimentum id dictum tortor. Morbi vitae varius dui, eu facilisis neque. Cras id fermentum eros. Vestibulum consequat mi in rhoncus rhoncus. Phasellus vitae lorem scelerisque augue fringilla ornare non sollicitudin odio. Quisque dignissim ipsum vitae metus semper, ut mollis neque pellentesque.
+
+        Quisque molestie orci ac placerat feugiat. Aliquam dictum libero non ante tempor, dignissim fringilla ipsum interdum. Praesent semper semper odio in ultricies. Phasellus semper sapien maximus tellus accumsan volutpat. Donec ut quam id arcu viverra volutpat. Cras in molestie ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla venenatis ornare nunc, id euismod turpis condimentum sed. Donec pretium pharetra risus, posuere iaculis nisi efficitur ac. Duis blandit lorem vitae tellus pulvinar euismod. Suspendisse ac imperdiet nunc, nec facilisis arcu. Nulla sed justo diam. Integer volutpat risus arcu. Sed semper dapibus arcu interdum sodales. Sed vitae hendrerit felis, vel dapibus tortor.
+        
+        Duis egestas, risus vitae volutpat scelerisque, eros neque vestibulum mauris, efficitur luctus magna lorem ac tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris eleifend nibh quis eros tempus, eget tincidunt metus dignissim. Quisque vel iaculis ante. Sed lobortis ipsum id rhoncus euismod. Aliquam iaculis risus sapien, ullamcorper rutrum magna facilisis vel. In hendrerit est nec tortor finibus, ac pretium orci aliquet. Etiam maximus magna eget arcu dapibus laoreet. Phasellus libero diam, dictum vitae elit quis, efficitur elementum arcu. Praesent mollis, sem at ornare posuere, turpis magna accumsan sem, eget bibendum ex neque ut nisl. Integer luctus nisl vitae maximus fermentum. Cras vestibulum augue tellus, ut hendrerit eros vestibulum ut. Donec eu ligula volutpat, vehicula nisl viverra, rutrum ipsum.
+        
+        In augue est, mattis vel posuere congue, vestibulum quis dui. Integer sed imperdiet leo. Morbi dignissim congue justo laoreet malesuada. Phasellus in lacinia augue. Maecenas commodo rutrum purus, non lobortis lorem congue tristique. Quisque id est tempus, condimentum diam nec, suscipit odio. Mauris facilisis augue sit amet tellus imperdiet vestibulum. Pellentesque vitae elit sollicitudin, blandit quam in, fermentum arcu. Maecenas porta justo massa, eget efficitur velit pulvinar sed. Praesent eget ipsum posuere, ornare lectus ut, suscipit nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In sed lacus dapibus, tincidunt libero ac, venenatis justo. Suspendisse ultrices nec justo ac facilisis. Maecenas in lacinia nisl, ut pellentesque purus. Donec vehicula vehicula nibh eu consequat.
+        
+        Suspendisse metus orci, ornare in mi non, rutrum interdum diam. Ut accumsan tellus at purus consequat, eget efficitur ex lacinia. Proin ornare aliquam consequat. In ligula massa, porta in pellentesque et, aliquam vitae diam. Phasellus efficitur sit amet leo at molestie. Cras tempus nisl arcu, nec sodales lacus efficitur vitae. Sed faucibus a purus vel fermentum. Proin malesuada tellus id ornare condimentum.
+        
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed tellus ex. Maecenas quis pellentesque dui. Donec lectus sem, mattis sit amet ultricies vel, laoreet id lectus. Etiam mattis, metus sed rutrum ullamcorper, neque nisl tristique magna, eget finibus lorem ligula nec risus. Curabitur commodo pellentesque lectus aliquet porta. Ut sollicitudin at turpis eu varius. Aenean viverra metus dolor, sit amet vulputate arcu rutrum vitae. Sed dignissim vestibulum arcu, id placerat libero cursus vitae. Aliquam euismod mi id diam venenatis faucibus. In consequat fringilla justo, quis tempus lectus vulputate ac. In vitae leo in sapien mattis condimentum id dictum tortor. Morbi vitae varius dui, eu facilisis neque. Cras id fermentum eros. Vestibulum consequat mi in rhoncus rhoncus. Phasellus vitae lorem scelerisque augue fringilla ornare non sollicitudin odio. Quisque dignissim ipsum vitae metus semper, ut mollis neque pellentesque.
+
+        Quisque molestie orci ac placerat feugiat. Aliquam dictum libero non ante tempor, dignissim fringilla ipsum interdum. Praesent semper semper odio in ultricies. Phasellus semper sapien maximus tellus accumsan volutpat. Donec ut quam id arcu viverra volutpat. Cras in molestie ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla venenatis ornare nunc, id euismod turpis condimentum sed. Donec pretium pharetra risus, posuere iaculis nisi efficitur ac. Duis blandit lorem vitae tellus pulvinar euismod. Suspendisse ac imperdiet nunc, nec facilisis arcu. Nulla sed justo diam. Integer volutpat risus arcu. Sed semper dapibus arcu interdum sodales. Sed vitae hendrerit felis, vel dapibus tortor.
+        
+        Duis egestas, risus vitae volutpat scelerisque, eros neque vestibulum mauris, efficitur luctus magna lorem ac tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris eleifend nibh quis eros tempus, eget tincidunt metus dignissim. Quisque vel iaculis ante. Sed lobortis ipsum id rhoncus euismod. Aliquam iaculis risus sapien, ullamcorper rutrum magna facilisis vel. In hendrerit est nec tortor finibus, ac pretium orci aliquet. Etiam maximus magna eget arcu dapibus laoreet. Phasellus libero diam, dictum vitae elit quis, efficitur elementum arcu. Praesent mollis, sem at ornare posuere, turpis magna accumsan sem, eget bibendum ex neque ut nisl. Integer luctus nisl vitae maximus fermentum. Cras vestibulum augue tellus, ut hendrerit eros vestibulum ut. Donec eu ligula volutpat, vehicula nisl viverra, rutrum ipsum.
+        
+        In augue est, mattis vel posuere congue, vestibulum quis dui. Integer sed imperdiet leo. Morbi dignissim congue justo laoreet malesuada. Phasellus in lacinia augue. Maecenas commodo rutrum purus, non lobortis lorem congue tristique. Quisque id est tempus, condimentum diam nec, suscipit odio. Mauris facilisis augue sit amet tellus imperdiet vestibulum. Pellentesque vitae elit sollicitudin, blandit quam in, fermentum arcu. Maecenas porta justo massa, eget efficitur velit pulvinar sed. Praesent eget ipsum posuere, ornare lectus ut, suscipit nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In sed lacus dapibus, tincidunt libero ac, venenatis justo. Suspendisse ultrices nec justo ac facilisis. Maecenas in lacinia nisl, ut pellentesque purus. Donec vehicula vehicula nibh eu consequat.
+        
+        Suspendisse metus orci, ornare in mi non, rutrum interdum diam. Ut accumsan tellus at purus consequat, eget efficitur ex lacinia. Proin ornare aliquam consequat. In ligula massa, porta in pellentesque et, aliquam vitae diam. Phasellus efficitur sit amet leo at molestie. Cras tempus nisl arcu, nec sodales lacus efficitur vitae. Sed faucibus a purus vel fermentum. Proin malesuada tellus id ornare condimentum.</p>
+    </div>
+
+    <div class="form-floating m-5 border border-5 border-danger rounded-top">
+        <textarea class="form-control bg-danger" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+        <label for="floatingTextarea">Comments</label>
+      </div>
+
+      <nav id="navbar-example2" class="navbar navbar-light bg-dark px-3 mb-3">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading1">The</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2">Dire</a>
+          </li>
+          <li class="nav-item"></li>
+            <a class="nav-link" href="#scrollspyHeading3">Straits</a>
+          </li>
+          
+        </ul>
+      </nav>
+
+      <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+        <h4 id="scrollspyHeading1">The</h4>
+        <p class="m-5">Sultans</p>
+        <h4 id="scrollspyHeading2">Dire</h4>
+        <p class="m-5">Of</p>
+        <h4 id="scrollspyHeading3">Straits</h4>
+        <p class="m-5">Swing</p>
+      </div>
+      <hr/>
+      <div class="m-5">
+        
+      </div>
+
+</div>
+
+        <footer class="footer fixed-bottom bg-dark">
+            <div class="container text-center">
+                <span class="text-white">
+                    Please, Listen to Guns n' Roses
+                </span>
+            </div>
+        </footer>
+
+        <!-- Bootstrap JS (with Popper.js for tooltips/popovers) -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+         <!--SCRIPT TO INITIALIZE ALL POPOVERS IN THE PAGE-->
+         <script src="js/script.js"></script>
+
+         <script src="js/server.js"></script>
+
+         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+    </body>
 </html>
