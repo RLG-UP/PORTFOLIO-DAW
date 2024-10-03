@@ -4,12 +4,14 @@ $(document).ready(function () {
         var date = $('#date').val();
         var start = $('#start').val();
         var end = $('#end').val();
-        var description = $('#description').val();
+        var description = $('#activity').val();
         var place = $('#place').val();
         var type = $('#type').val();
-        var notes = $('#notes').val();
+        var notes = $('#TxtArea').val();
         var flagColor = $('#color').val();
-        var availability = $('#availability').val();
+        var availability = $('#busy').checked;
+
+
 
         // Create a new row
         var newRow = `
@@ -22,14 +24,13 @@ $(document).ready(function () {
                 <td>${type}</td>
                 <td>${notes}</td>
                 <td style="background-color: ${flagColor};"></td>
-                <td>${availability === 'Busy' ? '<img src="Icons/busy.png" alt="Not Available" id="IconPhoto">' : '<img src="Icons/free.png" alt="Available" id="IconPhoto">'}</td>
+                <td>${availability === true ? '<img src="Icons/busy.png" alt="Not Available" id="IconPhoto">' : '<img src="Icons/free.png" alt="Available" id="IconPhoto">'}</td>
             </tr>
         `;
 
         // Append the new row to the table
-        $('#agendaTable tbody').append(newRow);
+        $('#scheduleTable tbody').append(newRow);
 
-        // Optionally, clear the input fields after adding the row
-        $('#insertForm')[0].reset();
+    
     });
 });
