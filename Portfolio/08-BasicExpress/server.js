@@ -17,7 +17,7 @@ app.route('/')
   .post((req, res) => {
     var w = req.body.weight;
     var h = req.body.height;
-    res.send("Your BMI is " + (w/(h*h)));
+    res.send("Your BMI is " + (w/(h*h)*10000));
   });
 
 
