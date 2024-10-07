@@ -1,0 +1,29 @@
+{
+  "name": "09-expresspersonalapi",
+  "version": "1.0.0",
+  "description": "Node for my portfolio 09-ExpressPersonalAPI",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RLG-UP/PORTFOLIO-DAW.git"
+  },
+  "keywords": [
+    "Express",
+    "Personal",
+    "API"
+  ],
+  "author": "RLG-UP",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "nodemon": "^3.1.7"
+  },
+  "bugs": {
+    "url": "https://github.com/RLG-UP/PORTFOLIO-DAW/issues"
+  },
+  "homepage": "https://github.com/RLG-UP/PORTFOLIO-DAW#readme"
+}
