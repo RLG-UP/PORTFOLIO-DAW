@@ -42,6 +42,10 @@ app.post('/task', (req, res)=>{
     res.redirect("/");
 });
 
+app.get('/task', (req, res) => {
+    res.json(tasks); 
+});
+
 app.get('/delete', (req, res)=>{
     var delIdx = req.query.idx;
     delete tasks[delIdx];
