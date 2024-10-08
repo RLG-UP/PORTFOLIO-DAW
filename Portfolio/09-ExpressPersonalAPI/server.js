@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 
 app.use(express.json());
@@ -9,13 +10,17 @@ app.set("view engine", "ejs");
 
 app.route('/')
     .get((req,res)=>{
-        res.render("index.html");
+        res.render('indx');
     });
 
-app.route('/greet')
-    .get((req, res)=>{
-        res.send(app.req);
-    });
+
+var names = [];
+
+app.post('/greet', (req, res)=>{
+    var nom = req.body.name;
+    console.log(nom);
+    res.render('indx', {"nom": nom});
+});
 
 
 

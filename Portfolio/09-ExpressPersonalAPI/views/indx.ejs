@@ -20,9 +20,10 @@
                 <input type="submit" value="go next">
             </form>
 
-            <% if nom { %>
-            <h3><%= nom %></h3>
-            <%}%>
+            <% if (typeof nom !== 'undefined' && nom) { %>
+                <h3>Hello, <%= nom %>!</h3>
+            <% } %>
+            
         <%}%>
 
 </body>
