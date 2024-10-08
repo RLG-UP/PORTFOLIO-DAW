@@ -19,13 +19,34 @@ app.route('/')
 
 
 
-app.get('/greet', (req, res)=>{
-    var nom = req.query.name;
-    console.log(nom);
-    names.push(nom);
 
+app.get('/greet', (req, res, next) => {
+    const nom = req.query.name;
+    console.log(nom);
+    
+    if (!nom) {
+        const error = new Error('Name not provided');
+        error.status = 400; 
+        return next(error);
+    }
+    
+    names.push(nom);
     res.redirect("/");
-    //res.render('indx', { "names": names , tasks});
+});
+
+app.use((err, req, res, next) => {
+    if (err.status === 400) {
+        res.render('indx', { names, tasks, errorMessage: err.message });
+    } else {
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+app.put('/greet/:name', (req, res) => {
+    const nom = req.params.name;
+    names.push(nom);
+    console.log(names);
+    res.json({names});
 });
 
 app.get('/sup', (req,res)=>{
