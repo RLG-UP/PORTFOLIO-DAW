@@ -1,0 +1,32 @@
+{
+  "name": "10-expressejs",
+  "version": "1.0.0",
+  "description": "Node for the 10 portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RLG-UP/PORTFOLIO-DAW.git"
+  },
+  "keywords": [
+    "Express",
+    "EJS",
+    "10"
+  ],
+  "author": "RLG-UP",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RLG-UP/PORTFOLIO-DAW/issues"
+  },
+  "homepage": "https://github.com/RLG-UP/PORTFOLIO-DAW#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "form-data": "^4.0.0",
+    "https": "^1.0.0",
+    "nodemon": "^3.1.7"
+  }
+}
