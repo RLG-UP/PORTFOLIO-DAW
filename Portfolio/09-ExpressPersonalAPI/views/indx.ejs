@@ -20,10 +20,14 @@
                 <input type="submit" value="go next">
             </form>
 
-            <% if (typeof nom !== 'undefined' && nom) { %>
-                <h3>Hello, <%= nom %>!</h3>
-            <% } %>
             
+            <ul>
+            <% names.forEach((vals, i)=>{%>
+                <li><a href="/sup?vals=<%=vals%>">Hello, <%= vals %> </a>
+                </li>
+                <%});%>
+            </ul>
+
         <%}%>
 
 </body>
