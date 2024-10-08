@@ -14,12 +14,12 @@
             <%= error %>
         </h3>
         <% } else { %>
-            <form action="/greet" method="POST">
-                Register:
+            
+            <form action="/greet" method="GET">
+                <p>Register:</p>
                 <input type="text" name="name" id="name" placeholder="Name">
                 <input type="submit" value="go next">
             </form>
-
             
             <ul>
             <% names.forEach((vals, i)=>{%>
@@ -31,12 +31,12 @@
             <h2>TODO List</h2>
             <ul>
             <% tasks.forEach((task, j)=>{%>
-                    <li><%=task%></li>
+                    <li><a href="/delete?idx=<%=j%>">|del|</a> <%=task%> <a href="/up?idx=<%=j%>">^</a> <a href="/down?idx=<%=j%>">v</a></li>
                 <%});%>
             </ul>
 
             <h3>Submit Task</h3>
-            <form>
+            <form action="/task" method="POST">
                 <input type="text" name="tsk" placeholder="Write Task">
                 <input type="submit" value="Add">
             </form>

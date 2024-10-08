@@ -19,12 +19,13 @@ app.route('/')
 
 
 
-app.post('/greet', (req, res)=>{
-    var nom = req.body.name;
+app.get('/greet', (req, res)=>{
+    var nom = req.query.name;
     console.log(nom);
     names.push(nom);
 
-    res.render('indx', { "names": names , tasks});
+    res.redirect("/");
+    //res.render('indx', { "names": names , tasks});
 });
 
 app.get('/sup', (req,res)=>{
@@ -36,9 +37,38 @@ app.get('/sup', (req,res)=>{
 
 app.post('/task', (req, res)=>{
     var tsk = req.body.tsk;
+    console.log(tsk);
     tasks.push(tsk);
-    res.render('indx', {"tasks": tasks, names});
+    res.redirect("/");
 });
+
+app.get('/delete', (req, res)=>{
+    var delIdx = req.query.idx;
+    delete tasks[delIdx];
+    res.redirect("/");
+  });
+
+  app.get('/up', (req, res)=>{
+    var upIdx = parseInt(req.query.idx);
+    if(upIdx > 0){
+        copy = tasks[upIdx-1];
+        tasks[upIdx-1] = tasks[upIdx];
+        tasks[upIdx] = copy;
+    }
+
+    res.redirect("/");
+  });
+
+  app.get('/down', (req, res)=>{
+    var upIdx = parseInt(req.query.idx);
+    if(upIdx < tasks.length-1){
+        copy = tasks[upIdx+1];
+        tasks[upIdx+1] = tasks[upIdx];
+        tasks[upIdx] = copy;
+    }
+    
+    res.redirect("/");
+  });
 
 app.listen(3000, ()=>{
     console.log("Application listening port 3000");
