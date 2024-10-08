@@ -28,6 +28,19 @@
                 <%});%>
             </ul>
 
+            <h2>TODO List</h2>
+            <ul>
+            <% tasks.forEach((task, j)=>{%>
+                    <li><%=task%></li>
+                <%});%>
+            </ul>
+
+            <h3>Submit Task</h3>
+            <form>
+                <input type="text" name="tsk" placeholder="Write Task">
+                <input type="submit" value="Add">
+            </form>
+
         <%}%>
 
 </body>
