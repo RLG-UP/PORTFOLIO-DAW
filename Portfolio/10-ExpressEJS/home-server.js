@@ -27,15 +27,22 @@ app.get("/", (req, res) => {
     res.render("test", params);
 });
 
+app.get("/hi", (req, res)=>{
+    var params = {
+      name,
+      posts
+    };
+    res.render("test-hi", params);
+});
+
 app.get("/login", (req, res) => {
   name = req.query.name + " (GET)";
-  console.log(req.body.name);
-  res.redirect("/");
+  res.redirect("/hi");
 });
 
 app.post("/login", (req, res) => {
     name = req.body.name + " (POST)";
-    res.redirect("/");
+    res.redirect("/hi");
 });
 
 app.listen(3000, (err) => {
