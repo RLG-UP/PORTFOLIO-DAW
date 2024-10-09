@@ -20,25 +20,22 @@ let posts = [];
 let name;
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname + "/public/html/index.html"));
+    var params = {
+        name,
+        posts
+    };
+    res.render("test", params);
 });
 
 app.get("/login", (req, res) => {
-  const userName = req.query.name;
-  if (userName) {
-    res.send(`Hello, ${userName}! (get)`);
-  } else {
-    res.send("ERROR : name required");
-  }
+  name = req.query.name + " (GET)";
+  console.log(req.body.name);
+  res.redirect("/");
 });
 
 app.post("/login", (req, res) => {
-  const userName = req.body.name; 
-  if (userName) {
-    res.send(`Hello, ${userName}! (post)`);
-  } else {
-    res.send("ERROR : name required");
-  }
+    name = req.body.name + " (POST)";
+    res.redirect("/");
 });
 
 app.listen(3000, (err) => {
