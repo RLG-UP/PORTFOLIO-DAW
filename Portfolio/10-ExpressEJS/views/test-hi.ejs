@@ -1,7 +1,38 @@
 <%- include("./partials/header"); -%>
 
-<%if(name){%>
-    <h2>Hello, <%=name%></h2>
+<div>
+<%if(name != "" || name !=" "){%>
+    <h1>Hello, <%=name%></h1>
+
+    <h2>Make a New Post</h2>
+    <form action="/new" method="post">
+        <input type="text" name="title" placeholder="Title">
+        <input type="text" name="content" placeholder="Content">
+        <input type="submit" placeholder="Create">
+    </form>
+
+    <%}else{%>
+        <h2>ERROR: No name</h2>
     <%}%>
+
+</div>
+
+<div>
+<%if(posts){%>
+    <%posts.forEach((val, i)=>{%>
+    <div class="blogPost">
+        <hr/>
+        <h9><i>Title</i></h9>
+        <h3><strong><em><%=val[0]%></em></strong></h3>
+        <h9><i>Summary</i></h9>
+        <p><%=val[2]%></p>
+        <br/>
+        <a href="/read?title=<%=val[0]%>&content=<%=val[1]%>&i=<%=i%>"><i>Read More</i></a>
+        <%});%>
+        
+    </div>
+<%}%>
+
+</div>
 
 <%- include("./partials/footer"); -%>

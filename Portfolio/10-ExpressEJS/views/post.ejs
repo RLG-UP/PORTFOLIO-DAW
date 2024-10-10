@@ -1,0 +1,16 @@
+<%- include("./partials/header"); -%>
+
+<div>
+
+    <%if(title && content){%>
+        <div class="blogPost">
+            <h1><strong><em><%=title%></em></strong></h1>
+            <p><a href="/edit?i=<%=i%>">Edit</a>  ||  <a href="/delete?i=<%=i%>">Delete</a></p>
+            <hr/>
+            <p><%=content%></p>
+        </div>
+    <%}%>
+
+</div>
+
+<%- include("./partials/footer"); -%>

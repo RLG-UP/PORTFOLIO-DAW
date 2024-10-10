@@ -36,12 +36,102 @@ app.get("/hi", (req, res)=>{
 });
 
 app.get("/login", (req, res) => {
-  name = req.query.name + " (GET)";
-  res.redirect("/hi");
+    if(req.query.name){
+        name = req.query.name + " (GET)";
+        res.redirect("/hi");
+    }
+    else{
+        res.redirect('/');
+    }
+ 
 });
 
 app.post("/login", (req, res) => {
-    name = req.body.name + " (POST)";
+    if(req.body.name){
+        name = req.body.name + " (POST)";
+        res.redirect("/hi");
+    }
+    else{
+        res.redirect('/');
+    }
+    
+});
+
+app.post("/new", (req, res)=>{
+    var title = req.body.title;
+    var content = req.body.content;
+
+    if(title && content){
+        var summary = "";
+        if(content.length > 100){
+            summary = content.slice(0,101) + " (...)";
+        }
+        else{
+            summary = content;
+        }
+        var newPost = [title, content, summary]
+        posts.push(newPost);
+    }
+
+    res.redirect("/hi");
+});
+
+app.get("/read", (req, res)=>{
+    var title = req.query.title;
+    var content = req.query.content;
+    var i = req.query.i;
+    
+    if(title && content){
+        console.log(title);
+        var params ={
+            name,
+            title,
+            content,
+            i
+        };
+        res.render("post", params);
+    }
+});
+
+app.get("/edit", (req, res)=>{
+    var i = req.query.i;
+    var title = posts[i][0];
+    var content = posts[i][1];
+
+    var params = {
+        name,
+        i,
+        title,
+        content
+    };
+
+    res.render("post-edit.ejs", params);
+
+});
+
+app.get("/delete", (req, res)=>{
+    var i = req.query.i;
+    delete posts[i]
+    res.redirect("/hi");
+});
+
+app.post("/savePost", (req, res)=>{
+    var newTitle = req.body.newTitle;
+    var newContent = req.body.newContent;
+    var summary = "";
+    var i = req.query.i;
+
+    if(newContent.length > 100){
+        summary = newContent.slice(0,101) + " (...)";
+    }
+    else{
+        summary = newContent;
+    }
+
+    posts[i][0] = newTitle;
+    posts[i][1] = newContent;
+    posts[i][2] = summary;
+
     res.redirect("/hi");
 });
 

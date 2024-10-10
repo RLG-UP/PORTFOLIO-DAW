@@ -6,3 +6,9 @@ html {
 body {
     background-color: beige !important;
 }
+
+.blogPost p{
+    white-space: normal;  
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+}

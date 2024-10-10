@@ -1,0 +1,29 @@
+<%- include("./partials/header"); -%>
+
+<div>
+
+    <%if(title && content){%>
+        <div class="blogPost">
+            <form action="/savePost?i=<%=i%>" method="post">
+
+            <h3><strong><em>Edit the Title</em></strong></h3>
+
+            <input type="text" name="newTitle" value="<%=title%>">
+
+            <input type="submit" placeholder="Save Changes">
+
+            <hr/>
+
+            <h3><strong><em>Edit the Content</em></strong></h3>
+
+            <input type="text" name="newContent" value="<%=content%>">
+
+            <input type="submit" placeholder="Save Changes">
+            
+            </form>
+        </div>
+    <%}%>
+
+</div>
+
+<%- include("./partials/footer"); -%>
