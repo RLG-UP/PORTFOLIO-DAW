@@ -1,5 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather report</title>
+    <link rel="stylesheet" href="./css/css.css"/>
+</head>
+
+<body>
+
 <p><i><a href="/">Return</a></i></p>
 
-<h1>City: <%= city %></h1>
+<h1>City: <%= city %></h1> <img src="https://openweathermap.org/img/wn/<%=icon%>@2x.png" alt="City Icon">
 <h3>Latitude: <%= latitude%>  || Longitude: <%= longitude%></h3>
 <h2>Temperature (C): <%=cityTemp%></h2>
+<h4>Description: <%=description%></h4>
+
+</body>
+
+</html>

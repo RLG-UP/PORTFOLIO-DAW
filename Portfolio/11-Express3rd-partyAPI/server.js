@@ -9,7 +9,7 @@ app.use(express.static("public"));
 app.engine("ejs", require("ejs").renderFile);
 app.set("view engine", "ejs");
 
-var key = "117ea9e77ee2d8dfa187d61b6d1ca076";
+var key = "INSERT YOUR KEY HERE!!!!";
 
 app.route("/")
     .get((req, res)=>{
@@ -27,8 +27,10 @@ app.route("/")
         var latitude = "";
         var longitude = "";
         var cityTemp = "";
+        var icon = "";
+        var description = "";
 
-
+        /*FIRST API CALL - LATITUDE AND LONGITUDE */
         await http.get(geoCall, (response=>{
             console.log("Got a response from geoCall");
             console.log(response.statusCode);
@@ -49,7 +51,7 @@ app.route("/")
               var tempCall = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}&units=metric`;
 
          
-
+           /*SECOND API CALL - TEMPERATURE*/
            https.get(tempCall, (response=>{
             console.log("Got a response from tempCall");
             console.log(response.statusCode);
@@ -67,13 +69,43 @@ app.route("/")
 
               console.log("Temperature: " + cityTemp);
 
-              var params = {
-                city,
-                cityTemp,
-                latitude,
-                longitude
-              };
-              res.render("response", params);
+
+            var iconCall = `https://samples.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`;
+
+             /*THIRD API CALL - ICONS and DESCRIPTION*/
+
+              https.get(iconCall, (response=>{
+                console.log("Got a response from iconCall");
+                console.log(response.statusCode);
+                
+                var responseContent="";
+                response.on("data", (data)=>{
+                  responseContent += data;
+                });
+            
+                response.on("end", ()=>{
+                    var jsonResp = JSON.parse
+                  (responseContent);
+    
+                  icon = jsonResp["weather"][0].icon;
+                  description = jsonResp["weather"][0].description;
+
+                  console.log("Icon: " + icon + " || Description: " + description);
+    
+                  var params = {
+                    city,
+                    cityTemp,
+                    latitude,
+                    longitude,
+                    icon,
+                    description
+                  };
+                  res.render("response", params);
+    
+                }).on("error", (e)=>{
+                  res.send("Error: $(e.message");
+                });
+              }));
 
             }).on("error", (e)=>{
               res.send("Error: $(e.message");
