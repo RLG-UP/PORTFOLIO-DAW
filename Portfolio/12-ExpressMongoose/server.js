@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -8,7 +9,15 @@ app.use(express.static("public"));
 app.engine("ejs", require("ejs").renderFile);
 app.set("view engine", "ejs");
 
+const user = process.env.DB_USER;
+const pass = process.env.DB_PASS;
+const db = process.env.DB;
+
+
 const mongoUrl = "mongodb://127.0.0.1:27017/f1";
+const uri = `mongodb+srv://${user}:${pass}@cluster0.m6rt5.mongodb.net/${db}?retryWrites=true&w=majority&appName=Cluster0`;
+
+
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Definition of a schema
