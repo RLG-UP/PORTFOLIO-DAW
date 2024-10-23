@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -15,10 +16,11 @@ const db = process.env.DB;
 
 
 const mongoUrl = "mongodb://127.0.0.1:27017/f1";
+
 const uri = `mongodb+srv://${user}:${pass}@cluster0.m6rt5.mongodb.net/${db}?retryWrites=true&w=majority&appName=Cluster0`;
 
 
-mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Definition of a schema
 const teamSchema = new mongoose.Schema({
@@ -62,9 +64,7 @@ let countries = [
   { code: "DEN", label: "Denmark" },
 ];
 
-app.use("/", async(req, res)=>{
-  
-});
+
 
 app.get("/", (req, res) => {
   res.render("index");
@@ -72,7 +72,29 @@ app.get("/", (req, res) => {
 
 app.route("/add")
   .post(async (req, res)=>{
-    
+    const team = new Team({
+      id: req.body.id,
+      name: req.body.name,
+      nationality: req.body.nationality,
+      url: req.body.url
+    });
+    await team.save();
+    console.log(team);
+
+    const pilot = new Driver({
+      num: req.body.num,
+      code: req.body.code,
+      forename: req.body.forename,
+      surname: req.body.surname,
+      dob: req.body.dob,
+      nationality: req.body.nationality,
+      url: req.body.url,
+      team: team
+    });
+
+    await pilot.save();
+    console.log(pilot);
+    res.redirect("/");
   })
 
 app.listen(3000, (err) => {
