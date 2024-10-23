@@ -62,9 +62,18 @@ let countries = [
   { code: "DEN", label: "Denmark" },
 ];
 
+app.use("/", async(req, res)=>{
+  
+});
+
 app.get("/", (req, res) => {
   res.render("index");
 });
+
+app.route("/add")
+  .post(async (req, res)=>{
+    
+  })
 
 app.listen(3000, (err) => {
   console.log("Listening on port 3000");
