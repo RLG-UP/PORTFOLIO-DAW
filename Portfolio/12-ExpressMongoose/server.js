@@ -54,7 +54,7 @@ let countries = [
 ];
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/html/index.html");
+  res.render("index");
 });
 
 app.listen(3000, (err) => {
