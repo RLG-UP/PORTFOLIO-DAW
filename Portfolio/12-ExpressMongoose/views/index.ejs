@@ -3,10 +3,10 @@
     <img src="../images/formula-1-logo-7.png" alt="lion brewery" />
     </div>
     <div>
-    <h1>Welcome to my F1 DB</h1>
+    <h1><strong>Welcome to F1 <i>DB</i></strong></h1>
     </div>
     
-    <form action="/driver" method="get">
+    <form action="/add" method="POST">
         <h2><i>Driver information</i></h2>
         <input type="text" name="num" id="num" placeholder="Number" />
         <input type="text" name="code" id="code" placeholder="Code" />
@@ -50,8 +50,49 @@
             <option value="mc_laren">McLaren</option>
 
         </select>
-        <p> <input type="submit" action="/add" method="POST"/> </p>
+        <p> <input type="submit" /> </p>
 
     </form>
+    
+    <div>
+        <h2><i>Registered Drivers</i></h2>
+        
+
+        <table class="driverTable">
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Code</th>
+                    <th>Forename</th>
+                    <th>Surname</th>
+                    <th>DoB</th>
+                    <th>Nationality</th>
+                    <th>URL</th>
+                    <th>Current Team</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%if(arrDrivers.length > 0){%>
+                    <%arrDrivers.forEach((dr, i)=>{%>
+                        <tr>
+                            <td><%=dr.num%></td>
+                            <td><%=dr.code%></td>
+                            <td><%=dr.forename%></td>
+                            <td><%=dr.surname%></td>
+                            <td><%=dr.dob.toLocaleDateString()%></td>
+                            <td><%=dr.nationality%></td>
+                            <td><%=dr.team.url%></td>
+                            <td><%=dr.team.name%></td>
+                        </tr>
+                    <%})%>
+                <%}else{%>
+                    <tr>
+                        <td colspan="9">No Drivers</td>
+                    </tr>
+                <%}%>
+            </tbody>
+        </table>
+        
+    </div>
 
     <%- include("./partials/footer"); -%>

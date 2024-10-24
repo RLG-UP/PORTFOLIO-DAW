@@ -23,6 +23,28 @@ html {
     position: relative;
 }
 
+.driverTable{
+    width: 100%;
+    text-align: center;
+}
+
+.driverTable thead th{
+    width: 11%;
+    background-color: #d10808;
+}
+
+.driverTable thead th:nth-child(1){
+    border-top-left-radius: 15px;
+}
+
+.driverTable thead th:nth-child(8){
+    border-top-right-radius: 15px;
+}
+
+.driverTable tbody td:nth-child(even){
+    background-color: rgb(10, 10, 10);
+}
+
 .logo{
     position: absolute;
     top: 4%;
@@ -51,5 +73,5 @@ select {
 }
 
 input[type=text]:focus {
-    border: 4px solid #ce1313;
+    border: 4px solid #d10808;
 }
