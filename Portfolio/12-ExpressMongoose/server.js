@@ -173,6 +173,11 @@ app.route("/add")
     await pilot.save();
     console.log(pilot);
     res.redirect("/");
+  });
+
+app.route("/edit")
+  .get((req, res)=>{
+    console.log(req.query);
   })
 
 app.listen(3000, (err) => {

@@ -57,14 +57,47 @@
                 <%if(arrDrivers.length > 0){%>
                     <%arrDrivers.forEach((dr, i)=>{%>
                         <tr>
-                            <td><%=dr.num%><i class="fa-solid fa-pen-to-square"></i></td>
-                            <td><%=dr.code%><i class="fa-solid fa-pen-to-square"></i></td>
-                            <td><%=dr.forename%><i class="fa-solid fa-pen-to-square"></i></td>
-                            <td><%=dr.surname%><i class="fa-solid fa-pen-to-square"></i></td>
-                            <td><%=dr.dob.toLocaleDateString()%><i class="fa-solid fa-pen-to-square"></i></td>
-                            <td><%=dr.nationality%><i class="fa-solid fa-pen-to-square"></i></td>
-                            <td><%=dr.team.url%><i class="fa-solid fa-pen-to-square"></i></td>
-                            <td><%=dr.team.name%><i class="fa-solid fa-pen-to-square"></i></td>
+                            <td><%=dr.num%>
+                                <a href="/edit?dr=<%=dr.id%>">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                            </td>
+                            <td><%=dr.code%>
+                                <a href="/edit?dr=<%=dr.id%>">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                            </td>
+                            <td><%=dr.forename%>
+                                <a href="/edit?dr=<%=dr.id%>">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                            </td>
+                            <td><%=dr.surname%>
+                                <a href="/edit?dr=<%=dr.id%>">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                            </td>
+                            <td><%=dr.dob.toLocaleDateString()%>
+                                <a href="/edit?dr=<%=dr.id%>">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                            </td>
+                            <td><%=dr.nationality%>
+                                <a href="/edit?dr=<%=dr.id%>">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                            </td>
+                            <td><%=dr.team.url%>
+                                <a href="/edit?dr=<%=dr.id%>">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                            </td>
+                            <td><%=dr.team.name%>
+                                <a href="/edit?dr=<%=dr.id%>">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                            </td>
+                            
                         </tr>
                     <%})%>
                 <%}else{%>
