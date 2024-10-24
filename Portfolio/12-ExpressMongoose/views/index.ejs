@@ -20,34 +20,16 @@
         <br />
         <label for="nation">Nationality: </label>
         <select name="nation" id="nation">
-            <option value="ENG">England</option>
-            <option value="SPA">Spain</option>
-            <option value="GET">Germany</option>
-            <option value="FRA">France</option>
-            <option value="MEX">Mexico</option>
-            <option value="AUS">Australia</option>
-            <option value="FIN">Finland</option>
-            <option value="DEN">Denmark</option>
-            <option value="NET">Netherlands</option>
-            <option value="CAN">Canada</option>
-            <option value="MON">Monaco</option>
-            <option value="THA">Thailand</option>
-            <option value="JAP">Japan</option>
-            <option value="CHI">China</option>
-            <option value="USA">USA</option>
+            <%countries.forEach((pays, i)=>{%>
+                <option value="<%=pays.code%>"><%=pays.label%></option>
+            <%})%>
+            
         </select>
         <label for="team">Team: </label>
         <select name="team" id="team">
-            <option value="mercedes">Mercedes</option>
-            <option value="aston_martin">Aston Martin</option>
-            <option value="alpine">Alpine</option>
-            <option value="hass_f1">Hass F1 Team</option>
-            <option value="red_bull">Red Bull Racing</option>
-            <option value="alpha_tauri">Alpha Tauri</option>
-            <option value="alpha_romeo">Alpha Romeo</option>
-            <option value="ferrari">Ferrari</option>
-            <option value="williams">Williams</option>
-            <option value="mc_laren">McLaren</option>
+            <%equipe.forEach((eq, i)=>{%>
+                <option value="<%=eq.code%>"><%=eq.label%></option>
+            <%})%>
 
         </select>
         <p> <input type="submit" /> </p>
@@ -75,14 +57,14 @@
                 <%if(arrDrivers.length > 0){%>
                     <%arrDrivers.forEach((dr, i)=>{%>
                         <tr>
-                            <td><%=dr.num%></td>
-                            <td><%=dr.code%></td>
-                            <td><%=dr.forename%></td>
-                            <td><%=dr.surname%></td>
-                            <td><%=dr.dob.toLocaleDateString()%></td>
-                            <td><%=dr.nationality%></td>
-                            <td><%=dr.team.url%></td>
-                            <td><%=dr.team.name%></td>
+                            <td><%=dr.num%><i class="fa-solid fa-pen-to-square"></i></td>
+                            <td><%=dr.code%><i class="fa-solid fa-pen-to-square"></i></td>
+                            <td><%=dr.forename%><i class="fa-solid fa-pen-to-square"></i></td>
+                            <td><%=dr.surname%><i class="fa-solid fa-pen-to-square"></i></td>
+                            <td><%=dr.dob.toLocaleDateString()%><i class="fa-solid fa-pen-to-square"></i></td>
+                            <td><%=dr.nationality%><i class="fa-solid fa-pen-to-square"></i></td>
+                            <td><%=dr.team.url%><i class="fa-solid fa-pen-to-square"></i></td>
+                            <td><%=dr.team.name%><i class="fa-solid fa-pen-to-square"></i></td>
                         </tr>
                     <%})%>
                 <%}else{%>

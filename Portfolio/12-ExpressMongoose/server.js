@@ -66,6 +66,19 @@ let countries = [
   { code: "DEN", label: "Denmark" },
 ];
 
+let equipe = [
+  { code: "mercedes", label: "Mercedes" },
+  { code: "aston_martin", label: "Aston Martin" },
+  { code: "alpine", label: "Alpine" },
+  { code: "hass_f1", label: "Hass F1 Team" },
+  { code: "red_bull", label: "Red Bull Racing" },
+  { code: "alpha_tauri", label: "Alpha Tauri" },
+  { code: "alpha_romeo", label: "Alpha Romeo" },
+  { code: "ferrari", label: "Ferrari" },
+  { code: "williams", label: "Williams" },
+  { code: "mc_laren", label: "McLaren" }
+];
+
 var arrDrivers = []
 var arrTeams = []
 
@@ -128,7 +141,9 @@ app.get("/", async (req, res) => {
 
   var params = {
     arrDrivers,
-    arrTeams
+    arrTeams,
+    countries,
+    equipe
   };
   res.render("index", params);
 });

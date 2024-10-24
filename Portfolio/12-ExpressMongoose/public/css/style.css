@@ -28,6 +28,41 @@ html {
     text-align: center;
 }
 
+.driverTable i{
+    font-weight: 100;
+    margin-left: 10%;
+    padding: auto;
+    font-size: smaller;
+    color: #d10808;
+    display: none;
+}
+
+.driverTable tbody tr{
+    transition: 0.1s ease-in-out;
+}
+
+.driverTable tbody tr:hover{
+    scale: 1.007;
+}
+
+.driverTable tbody tr:hover td{
+    background-color: #d10808;
+}
+
+.driverTable tbody tr td:hover i{
+    display: inline;
+}
+
+.driverTable tbody tr td i:hover {
+    font-weight: 700;
+}
+
+.driverTable tbody tr td:hover{
+    background-color: beige;
+    color: #d10808;
+    font-weight: 600;
+}
+
 .driverTable thead th{
     width: 11%;
     background-color: #d10808;
