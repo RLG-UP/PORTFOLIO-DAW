@@ -101,65 +101,50 @@
                             
                         </tr>
                         <%}else{%>
-                        <form>
+                        <form method="GET" action="/save">
+                            <div class="saveBtn">
+                                <button type="submit" name="dr" value="<%= dr._id %>">
+                                    <i class="fa-solid fa-square-check"></i> Save
+                                </button>
+                            </div>
                             <tr>
                             <td>
-                                <input value="<%= dr.num %>" name="num">
-                                <a href="/save?dr=<%= dr._id %>">
-                                    <i class="fa-solid fa-square-check"></i>
-                                </a>
-                                </td>
-                                
-                                <td>
-                                <input value="<%= dr.code %>" name="code">
-                                <a href="/save?dr=<%= dr._id %>">
-                                    <i class="fa-solid fa-square-check"></i>
-                                </a>
-                                </td>
-                                
-                                <td>
-                                <input value="<%= dr.forename %>" name="forename">
-                                <a href="/save?dr=<%= dr._id %>">
-                                    <i class="fa-solid fa-square-check"></i>
-                                </a>
-                                </td>
-                                
-                                <td>
-                                <input value="<%= dr.surname %>" name="surname">
-                                <a href="/save?dr=<%= dr._id %>">
-                                    <i class="fa-solid fa-square-check"></i>
-                                </a>
-                                </td>
-                                
-                                <td>
-                                <input value="<%= dr.dob.toISOString().split('T')[0] %>" name="dob">
-                                <a href="/save?dr=<%= dr._id %>">
-                                    <i class="fa-solid fa-square-check"></i>
-                                </a>
-                                </td>
-                                
-                                <td>
-                                <input value="<%= dr.nationality %>" name="nationality">
-                                <a href="/save?dr=<%= dr._id %>">
-                                    <i class="fa-solid fa-square-check"></i>
-                                </a>
-                                </td>
-                                
-                                <td>
-                                <input value="<%= dr.team.url %>" name="teamUrl">
-                                <a href="/save?dr=<%= dr._id %>">
-                                    <i class="fa-solid fa-square-check"></i>
-                                </a>
-                                </td>
-                                
-                                <td>
-                                <input value="<%= dr.team.name %>" name="teamName">
-                                <a href="/save?dr=<%= dr._id %>">
-                                    <i class="fa-solid fa-square-check"></i>
-                                </a>
-                                </td>
+                                <input value="<%= dr.num %>" name="num" id="num_<%= dr._id %>">
+                            </td>
+                            
+                            <td>
+                                <input value="<%= dr.code %>" name="code" id="code_<%= dr._id %>">
+                            </td>
+                            
+                            <td>
+                                <input value="<%= dr.forename %>" name="forename" id="forename_<%= dr._id %>">
+                            </td>
+                            
+                            <td>
+                                <input value="<%= dr.surname %>" name="surname" id="surname_<%= dr._id %>">
+                            </td>
+                            
+                            <td>
+                                <input value="<%= dr.dob.toISOString().split('T')[0] %>" name="dob" id="dob_<%= dr._id %>">
+                            </td>
+                            
+                            <td>
+                                <input value="<%= dr.nationality %>" name="nationality" id="nationality_<%= dr._id %>">
+                            </td>
+                            
+                            <td>
+                                <input value="<%= dr.team.url %>" name="teamUrl" id="teamUrl_<%= dr._id %>">
+                            </td>
+                            
+                            <td>
+                                <input value="<%= dr.team.name %>" name="teamName" id="teamName_<%= dr._id %>">
+                            </td>
+                    
+                            
+                            
                             </tr>
                         </form>
+                            
                         <%}%>
 
                     <%})%>

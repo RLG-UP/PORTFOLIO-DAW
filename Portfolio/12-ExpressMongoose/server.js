@@ -193,7 +193,12 @@ app.route("/edit")
     }else{
     res.redirect("/");
     }
-  })
+  });
+
+app.route("/save")
+  .get(async(req, res)=>{
+    console.log(req.query.num);
+  });
 
 app.listen(3000, (err) => {
   console.log("Listening on port 3000");
