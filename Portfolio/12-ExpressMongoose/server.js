@@ -81,6 +81,7 @@ let equipe = [
 
 var arrDrivers = []
 var arrTeams = []
+var editDriver = null;
 
 fs.createReadStream("public/data/f1_2023.csv")
   .pipe(csv())
@@ -136,6 +137,7 @@ fs.createReadStream("public/data/f1_2023.csv")
   })
 
 app.get("/", async (req, res) => {
+  editDriver = null
   arrDrivers = await Driver.find({});
   arrTeams = await Team.find({});
 
@@ -176,8 +178,21 @@ app.route("/add")
   });
 
 app.route("/edit")
-  .get((req, res)=>{
-    console.log(req.query);
+  .get(async (req, res)=>{
+    editDriver = await Driver.findOne({ _id: req.query.dr});
+    if(editDriver){
+      console.log(editDriver);
+      var params = {
+        editDriver,
+        arrDrivers,
+        arrTeams,
+        countries,
+        equipe
+      }
+      res.render("edit.ejs", params);
+    }else{
+    res.redirect("/");
+    }
   })
 
 app.listen(3000, (err) => {
