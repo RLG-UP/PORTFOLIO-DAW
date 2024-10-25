@@ -103,7 +103,7 @@
                         <%}else{%>
                         <form method="GET" action="/save">
                             <div class="saveBtn">
-                                <button type="submit" name="dr" value="<%= dr._id %>">
+                                <button type="submit" name="_id" value="<%= dr._id %>">
                                     <i class="fa-solid fa-square-check"></i> Save
                                 </button>
                             </div>
@@ -125,7 +125,7 @@
                             </td>
                             
                             <td>
-                                <input value="<%= dr.dob.toISOString().split('T')[0] %>" name="dob" id="dob_<%= dr._id %>">
+                                <input type="date"  value="<%= dr.dob.toISOString().split('T')[0] %>" name="dob" id="dob_<%= dr._id %>">
                             </td>
                             
                             <td>
@@ -133,11 +133,11 @@
                             </td>
                             
                             <td>
-                                <input value="<%= dr.team.url %>" name="teamUrl" id="teamUrl_<%= dr._id %>">
+                                <input value="<%= dr.team.url %>" name="url" id="url_<%= dr._id %>">
                             </td>
                             
                             <td>
-                                <input value="<%= dr.team.name %>" name="teamName" id="teamName_<%= dr._id %>">
+                                <input value="<%= dr.team.name %>" name="name" id="team_name_<%= dr._id %>">
                             </td>
                     
                             

@@ -197,7 +197,31 @@ app.route("/edit")
 
 app.route("/save")
   .get(async(req, res)=>{
-    console.log(req.query.num);
+    const driverData = {
+      num: Number(req.query.num),
+      code: req.query.code,
+      forename: req.query.forename,
+      surname: req.query.surname,
+      dob: new Date(req.query.dob),
+      nationality: req.query.nationality,
+      url: req.query.url,
+      team: {
+        id: Number(req.query.num),
+        name: req.query.name,
+        nationality: req.query.nationality,
+        url: req.query.url
+      }
+    };
+
+    console.log(driverData);
+
+    const updatedDriver = await Driver.findByIdAndUpdate(
+      req.query._id,           
+      driverData,   
+      { new: true }         
+     );
+    console.log("|| Driver Updated ||")
+    res.redirect("/");
   });
 
 app.listen(3000, (err) => {
