@@ -129,7 +129,14 @@
                             </td>
                             
                             <td>
-                                <input value="<%= dr.nationality %>" name="nationality" id="nationality_<%= dr._id %>">
+                            <select name="nationality" id="nationality_<%= dr._id %>">
+                                <% countries.forEach((pays, i) => { %>
+                                    <option value="<%= pays.code %>" <%= pays.code === dr.nationality ? 'selected' : '' %>>
+                                        <%= pays.label %>
+                                    </option>
+                                <% }) %>
+                            </select>
+                                
                             </td>
                             
                             <td>
@@ -137,7 +144,14 @@
                             </td>
                             
                             <td>
-                                <input value="<%= dr.team.name %>" name="name" id="team_name_<%= dr._id %>">
+                            
+                            <select name="name" id="team_name_<%= dr._id %>">
+                                <% equipe.forEach((eq, i) => { %>
+                                    <option value="<%= eq.code %>" <%= eq.code === dr.team.name ? 'selected' : '' %>>
+                                        <%= eq.label %>
+                                    </option>
+                                <% }) %>
+                            </select>
                             </td>
                     
                             
