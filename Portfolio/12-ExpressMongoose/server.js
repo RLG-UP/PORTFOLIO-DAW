@@ -139,9 +139,16 @@ fs.createReadStream("public/data/f1_2023.csv")
 
 app.get("/", async (req, res) => {
   editDriver = null
-  arrDrivers = await Driver.find({});
+  
   arrTeams = await Team.find({});
   filter = req.query.filter; 
+  if(filter){
+    arrDrivers = await Driver.find({}).sort({"team.name":1});
+  }
+  else{
+    arrDrivers = await Driver.find({}).sort({forename:1});
+  };
+
   console.log("Filter By " + (filter?"Teams":"Drivers") + " activated");
 
   var params = {
