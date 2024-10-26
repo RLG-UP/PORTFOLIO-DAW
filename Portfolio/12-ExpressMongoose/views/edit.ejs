@@ -3,38 +3,9 @@
     <img src="../images/formula-1-logo-7.png" alt="lion brewery" />
     </div>
     <div>
-    <h1><strong>Welcome to F1 <i>DB</i></strong></h1>
+    <h1><strong>Edit Menu F1 <i>DB</i></strong></h1>
     </div>
     
-    <form action="/add" method="POST">
-        <h2><i>Driver information</i></h2>
-        <input type="text" name="num" id="num" placeholder="Number" />
-        <input type="text" name="code" id="code" placeholder="Code" />
-        <input type="text" name="name" id="name" placeholder="Name" />
-        <input type="text" name="lname" id="lname" placeholder="Last name" />
-        <br />
-        <label for="dob">Date of birth: </label>
-        <input type="date" name="dob" id="dob" />
-        <label for="url">Biography URL: </label>
-        <input type="url" name="url" id="url" />
-        <br />
-        <label for="nation">Nationality: </label>
-        <select name="nation" id="nation">
-            <%countries.forEach((pays, i)=>{%>
-                <option value="<%=pays.code%>"><%=pays.label%></option>
-            <%})%>
-            
-        </select>
-        <label for="team">Team: </label>
-        <select name="team" id="team">
-            <%equipe.forEach((eq, i)=>{%>
-                <option value="<%=eq.code%>"><%=eq.label%></option>
-            <%})%>
-
-        </select>
-        <p> <input type="submit" /> </p>
-
-    </form>
     
     <div>
         <h2><i>Registered Drivers</i></h2>
@@ -103,7 +74,7 @@
                             
                         </tr>
                         <%}else{%>
-                        <form method="GET" action="/save">
+                        <form class="formT" method="GET" action="/save">
                             <div class="saveBtn">
                                 <button type="submit" name="_id" value="<%= dr._id %>">
                                     <i class="fa-solid fa-square-check"></i> Save

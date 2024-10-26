@@ -82,6 +82,7 @@ let equipe = [
 var arrDrivers = []
 var arrTeams = []
 var editDriver = null;
+var filter = "enabled";
 
 fs.createReadStream("public/data/f1_2023.csv")
   .pipe(csv())
@@ -140,12 +141,15 @@ app.get("/", async (req, res) => {
   editDriver = null
   arrDrivers = await Driver.find({});
   arrTeams = await Team.find({});
+  filter = req.query.filter; 
+  console.log("Filter By " + (filter?"Teams":"Drivers") + " activated");
 
   var params = {
     arrDrivers,
     arrTeams,
     countries,
-    equipe
+    equipe,
+    filter
   };
   res.render("index", params);
 });

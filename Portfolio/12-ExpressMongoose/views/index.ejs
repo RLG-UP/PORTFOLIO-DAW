@@ -6,7 +6,7 @@
     <h1><strong>Welcome to F1 <i>DB</i></strong></h1>
     </div>
     
-    <form action="/add" method="POST">
+    <form class="formT" action="/add" method="POST">
         <h2><i>Driver information</i></h2>
         <input type="text" name="num" id="num" placeholder="Number" />
         <input type="text" name="code" id="code" placeholder="Code" />
@@ -37,8 +37,18 @@
     </form>
     
     <div>
-        <h2><i>Registered Drivers</i></h2>
         
+        <div style="display: flex; align-items: center;">
+            <h2 style="margin-right:15%;"><i>Registered Drivers</i></h2>
+            <form action="/" method="GET">
+                <label class="switch">
+                    <input type="checkbox" name="filter" onchange="this.form.submit()" value="on" <% if (filter) { %> checked <% } %>>
+                    <span class="slider round"></span>
+                </label>
+            </form>
+            
+            <p style="margin-left: 2%;"><i>Filter By <%= filter ? "Teams" : "Drivers" %></i></p>
+        </div>
 
         <table class="driverTable">
             <thead>
