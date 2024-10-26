@@ -137,19 +137,35 @@ fs.createReadStream("public/data/f1_2023.csv")
     console.log("Finished inserting data from the .csv file");
   })
 
-app.get("/", async (req, res) => {
+  async function middleware(req, res, next) {
+    try {
+      const teams = await Team.find({});
+      
+      const filter = req.query.filter;
+  
+      const drivers = filter
+        ? await Driver.find({}).sort({ "team.name": 1 }) : await Driver.find({}).sort({ forename: 1 }); 
+  
+      req.data = {
+        arrTeams: teams,
+        arrDrivers: drivers,
+        filter: filter,
+      };
+
+      console.log("Filter By " + (filter?"Teams":"Drivers") + " activated");
+  
+      next(); 
+    } catch (error) {
+      next(error);
+    }
+  }
+
+app.use(middleware);
+
+app.get("/", (req, res) => {
   editDriver = null
   
-  arrTeams = await Team.find({});
-  filter = req.query.filter; 
-  if(filter){
-    arrDrivers = await Driver.find({}).sort({"team.name":1});
-  }
-  else{
-    arrDrivers = await Driver.find({}).sort({forename:1});
-  };
-
-  console.log("Filter By " + (filter?"Teams":"Drivers") + " activated");
+  const {arrTeams, arrDrivers, filter} = req.data;
 
   var params = {
     arrDrivers,
@@ -193,6 +209,8 @@ app.route("/edit")
     editDriver = await Driver.findOne({ _id: req.query.dr});
     if(editDriver){
       console.log(editDriver);
+      const {arrTeams, arrDrivers} = req.data;
+      
       var params = {
         editDriver,
         arrDrivers,
