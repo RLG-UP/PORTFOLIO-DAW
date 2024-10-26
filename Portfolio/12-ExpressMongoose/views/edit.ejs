@@ -83,7 +83,8 @@
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
                             </td>
-                            <td><%=dr.nationality%>
+                            <td><% const nationalityLabel = countries.find(p => p.code === dr.nationality)?.label; %>
+                                <%= nationalityLabel ? nationalityLabel : dr.nationality %>
                                 <a href="/edit?dr=<%=dr._id%>">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
@@ -93,7 +94,8 @@
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
                             </td>
-                            <td><%=dr.team.name%>
+                            <td><% const teamLabel = equipe.find(p => p.code === dr.team.name)?.label; %>
+                                <%= teamLabel ? teamLabel : dr.team.name %>
                                 <a href="/edit?dr=<%=dr._id%>">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
