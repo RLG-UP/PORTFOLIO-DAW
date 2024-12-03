@@ -1,21 +1,43 @@
 <%- include("header") -%>
 
-  <div class="box" id="heading">
-    <h1> <%= listTitle %> </h1>
-  </div>
+<div class="box" id="heading">
+  <h1> <%= listTitle %> </h1>
+</div>
 
-  <div class="box">
-    <% for (let i=0; i<newListItems.length; i++) { %>
-      <div class="item">
-        <input type="checkbox">
-        <p><%=  newListItems[i]  %></p>
-      </div>
-      <% } %>
+<div class="box" id="heading">
+  <% if(listTitle !== "Work List") { %>
+    <a href="/work">Go to the Work List</a>
+  <% } else { %>
+    <a href="/">Go back to the Day List</a>
+  <% } %>
+</div>
 
-      <form class="item" action="/" method="post">
-        <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
-        <button type="submit" name="list">+</button>
-      </form>
-  </div>
+<div class="box">
+  <% if(listTitle === "Work List") { %>
+    <%- include("workDelete", {newListItems}) -%>
+  <% } else { %>
+    <%- include("dayDelete", {newListItems}) -%>
+  <% } %>
+
+  <form class="item" action="/" method="post">
+    <select name="list">
+      <option value="Work" <% if(listTitle === "Work List") { %>selected<% } %>>Work</option>
+      <option value="Day" <% if(listTitle !== "Work List") { %>selected<% } %>>Day</option>
+    </select>
+    <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+    <button type="submit">+</button>
+  </form>
+
+  <% for (let i = 0; i < newListItems.length; i++) { %>
+    <div class="item">
+      <input type="checkbox">
+      <p><%= newListItems[i] %></p>
+    </div>
+  <% } %>
+
+  <% if (error.length > 0) { %>
+    <error><%= error %></error>
+  <% } %>
+</div>
 
 <%- include("footer") -%>

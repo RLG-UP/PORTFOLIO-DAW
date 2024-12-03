@@ -1,37 +1,86 @@
 const express = require("express");
+const mongoose = require("mongoose");
+require("dotenv").config();
 const bodyParser = require("body-parser");
 const date = require(__dirname + "/date.js");
 
 const app = express();
+const secret = process.env.SECRET;
 
 app.set("view engine", "ejs");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-const items = ["Buy Food", "Cook Food", "Eat Food"];
-const workItems = [];
+let error = "";
+
+mongoose.connect("here_the_mongo_url", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+const taskSchema = new mongoose.Schema({ item: { type: String, required: true } });
+const Task = mongoose.model("Task", taskSchema);
+
+const workTaskSchema = new mongoose.Schema({ item: { type: String, required: true } });
+const WorkTask = mongoose.model("WorkTask", workTaskSchema);
 
 app.get("/", (req, res) => {
   const day = date.getDate();
 
-  res.render("list", { listTitle: day, newListItems: items });
+  Task.find({})
+    .then((tasks) => {
+      res.render("list", { listTitle: day, newListItems: tasks, error });
+    })
+    .catch(() => {
+      res.render("list", { listTitle: day, newListItems: [], error: "Error loading tasks." });
+    });
 });
 
 app.post("/", (req, res) => {
   const item = req.body.newItem;
 
   if (req.body.list === "Work") {
-    workItems.push(item);
-    res.redirect("/work");
+    const task = new WorkTask({ item });
+
+    task
+      .save()
+      .then(() => res.redirect("/work"))
+      .catch(() => res.redirect("/work"));
   } else {
-    items.push(item);
-    res.redirect("/");
+    const task = new Task({ item });
+
+    task
+      .save()
+      .then(() => res.redirect("/"))
+      .catch(() => res.redirect("/"));
   }
 });
 
 app.get("/work", (req, res) => {
-  res.render("list", { listTitle: "Work List", newListItems: workItems });
+  WorkTask.find({})
+    .then((tasks) => {
+      res.render("list", { listTitle: "Work List", newListItems: tasks, error });
+    })
+    .catch(() => {
+      res.render("list", { listTitle: "Work List", newListItems: [], error: "Error loading tasks." });
+    });
+});
+
+app.post("/work/delete", (req, res) => {
+  const id = req.body.id;
+
+  WorkTask.findByIdAndDelete(id)
+    .then(() => res.redirect("/work"))
+    .catch(() => res.redirect("/work"));
+});
+
+app.post("/delete", (req, res) => {
+  const id = req.body.id;
+
+  Task.findByIdAndDelete(id)
+    .then(() => res.redirect("/"))
+    .catch(() => res.redirect("/"));
 });
 
 app.get("/about", (req, res) => {
